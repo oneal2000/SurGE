@@ -1,0 +1,11 @@
+FlagEmbedding
+bertopic
+safetensors
+torch==1.13.1+cu117 
+rouge-score
+sacrebleu
+numpy==1.26.4
+openai
+transformers==4.44.2
+gdown
+socksio

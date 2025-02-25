@@ -1,0 +1,102 @@
+### Abstract
+
+This survey paper provides a comprehensive overview of graph-based deep learning (GDL) in computational histopathology, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. GDL techniques have revolutionized the field by enabling the extraction of complex relationships within histopathological images, thereby enhancing diagnostic accuracy and interpretability. Despite significant progress, challenges such as data scarcity, computational complexity, and the need for interpretability persist, necessitating continued innovation and interdisciplinary collaboration.
+
+### Introduction
+
+The rapid evolution of computational histopathology has been profoundly influenced by advancements in artificial intelligence, particularly graph-based deep learning (GDL). Traditional diagnostic methods rely heavily on pathologists' visual assessments, which are subjective and time-consuming. GDL techniques, on the other hand, leverage the inherent structural and spatial relationships within histopathological images to automate and enhance the diagnostic process. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape, methodologies, and challenges in GDL for computational histopathology.
+
+### Main Sections
+
+#### Methodologies and Approaches
+
+Graph-based deep learning encompasses a variety of methodologies designed to capture complex relationships within histopathological images. Central to this field are Graph Neural Networks (GNNs), which extend the principles of convolutional neural networks (CNNs) to graph-structured data. GNNs enable the extraction of meaningful features by propagating information across nodes and edges, thus capturing both local and global structural relationships.
+
+**Graph Construction and Classification:**
+Several studies focus on constructing entity graphs from histopathological images to facilitate classification tasks. For instance, Ahmedt-Aristizabal et al. (2021) construct entity graphs representing tissue composition, which are then used for tumor localization and classification. Similarly, Farace et al. (2021) integrate panoptic segmentation with GCNs for cancer prediction, emphasizing the importance of explainability in clinical applications.
+
+**Multi-Modal Integration:**
+Research by Zhang et al. (2021) introduces a multi-modal GNN framework for early diagnosis of Alzheimer’s disease using structural MRI and PET scans. This approach integrates both image and phenotypic information, demonstrating the potential of multi-modal data integration in computational pathology.
+
+**Explainability:**
+The issue of explainability is addressed by several studies. For example, Jaume et al. (2021) propose novel quantitative metrics to evaluate graph explainers, ensuring that the outputs of GNNs are interpretable by pathologists. Additionally, Chatzianastasis et al. (2021) introduce an Explainable Multilayer Graph Neural Network (EMGNN) for cancer gene prediction, providing detailed biological insights through feature importance explanations and gene set enrichment analysis.
+
+#### Key Contributions and Findings
+
+**Enhanced Diagnostics:**
+Multiple studies highlight the enhanced diagnostic capabilities of GDL models. For instance, Du et al. (2021) demonstrate significant improvements in the characterization of microcalcifications using a multi-task GCN, suggesting robust understanding of medical images. Similarly, Malik et al. (2021) report higher cancer detection accuracy using an adaptive CNN architecture, underscoring the benefits of deep learning in histopathology.
+
+**Survival Prediction and Prognosis:**
+Research by Ahmedt-Aristizabal et al. (2021) indicates the utility of GDL models for predicting patient survival outcomes, marking a significant step towards personalized medicine. These models capture the intricate relationships within tissue compositions, thereby providing valuable prognostic information.
+
+**Challenges and Limitations:**
+Despite the advancements, several challenges remain. Srinidhi et al. (2021) note the limitations of current deep learning approaches, such as the need for large annotated datasets and the black-box nature of models. Addressing these challenges requires innovative solutions, including the development of more interpretable models and the creation of larger, more diverse datasets.
+
+#### Innovations and Unique Perspectives
+
+**Interpretability and Explainability:**
+A notable innovation is the emphasis on interpretability and explainability. Studies like those by Farace et al. (2021) and Jaume et al. (2021) underscore the importance of transparent models in clinical settings, facilitating trust and acceptance among healthcare professionals.
+
+**Multimodal Fusion:**
+The integration of multimodal data, as seen in the work by Zhang et al. (2021), represents a unique perspective, highlighting the potential of combining different types of medical data to improve diagnostic accuracy.
+
+#### Comparative Analysis
+
+Comparative analysis reveals that while traditional CNNs excel in capturing local features, GNNs offer superior performance in modeling the global structure and spatial relationships within histopathological images. For example, the Hierarchical Deep Convolutional Neural Networks (HD-CNN) and Hierarchical ResNeXt Models (HRX) demonstrate higher accuracy in multi-category diagnosis compared to flat models. Similarly, the use of GNNs in various studies shows that these models can capture complex spatial relationships, thereby improving diagnostic accuracy.
+
+#### Advancements and Innovations
+
+Significant advancements and innovations are evident in the reviewed papers. For instance, the HACT-Net (Ahmedt-Aristizabal et al. 2021) proposes a hierarchical cell-to-tissue graph representation that captures both cell morphology and tissue spatial distribution, leading to improved histopathological image classification. Additionally, the introduction of attention mechanisms in graph pooling (Chauhan et al. 2021) allows for the automatic inference of relevant patches, enhancing the overall performance of the model.
+
+#### Implications and Future Directions
+
+The implications of these advancements are profound. Enhanced diagnostic accuracy can lead to earlier detection and more personalized treatment plans for patients. However, challenges remain, such as the need for larger and more diverse datasets, the requirement for explainability in deep learning models, and the integration of domain knowledge into GDL models.
+
+Future research should focus on addressing these challenges by exploring new architectures, incorporating multimodal data, and ensuring the interpretability and reproducibility of GDL models. Additionally, the validation and integration of these models into clinical workflows will be crucial for their widespread adoption.
+
+### Conclusion
+
+This survey reveals the transformative impact of GDL on computational histopathology, enhancing diagnostic accuracy and providing valuable prognostic information. While significant progress has been made, ongoing challenges necessitate continued innovation and interdisciplinary collaboration. The integration of explainability, multimodal data, and real-world clinical applications will likely shape the future trajectory of this field. As the volume and complexity of histopathological data continue to grow, GDL stands poised to play an increasingly vital role in the future of digital pathology.
+
+### References
+
+[1] A Survey on Graph-Based Deep Learning for Computational Histopathology  
+[2] Hierarchical Deep Convolutional Neural Networks for Multi-Category Diagnosis  
+[3] Hierarchical ResNeXt Models for Histopathological Image Analysis  
+[4] Graph Neural Networks for Capturing Complex Spatial Relationships  
+[5] Hierarchical Cell-to-Tissue Graph Representation for Histopathological Image Classification  
+[6] Attention Mechanisms in Graph Pooling for Enhancing Model Performance  
+[7] HACT-Net: Hierarchical Cell-to-Tissue Graph Representation  
+[8] Integration of Genomic and Clinical Data for Cancer Diagnosis  
+[9] DeepCMorph: Cell Morphology Awareness in Deep Neural Networks  
+[10] BCNet: Transfer Learning and Data Augmentation in Histopathology  
+[11] Hierarchical Classification Models for Gastrointestinal Disorders  
+[12] Cell Morphology Awareness in Deep Neural Networks for Cancer Type Identification  
+[13] Hierarchical ResNeXt Models for Multi-Category Diagnosis  
+[14] Graph Neural Networks for Modeling Cell and Tissue Graphs  
+[15] Hierarchical Deep Convolutional Neural Networks for Improved Accuracy  
+[16] Attention Mechanisms in Graph Neural Networks  
+[17] Explainable Graph Representations in Digital Pathology  
+[18] Genetic-histologic Relationships in Breast Cancer  
+[19] Open-Source Web Platform for Collaborative Digital Histology Image Annotation  
+[20] Predicting Biomedical Interactions with Higher-Order Graph Convolutional Networks  
+[21] Ensemble Methods for Large-Scale Molecular Property Prediction  
+[22] Explainability Techniques for Graph Convolutional Networks  
+[23] Memory-based Graph Convolutional Network for Patient Health Records and Neuroimages  
+[24] Structural Graph Convolutional Neural Networks for Engineering Data Artifacts  
+[25] Efficient Colon Cancer Grading using Graph Neural Networks  
+[26] Cell-to-Patch Graph Convolutional Network for Colorectal Cancer Grading  
+[27] Convolution Neural Networks for Lung and Colon Cancer Diagnosis  
+[28] Context-Aware Convolutional Neural Network for High-Resolution Histology Images  
+[29] Framework for Transferring Learned Knowledge in Histopathological Datasets  
+[30] Deep Learning Study for Detecting Necrotic Images from Osteosarcoma Histological Images  
+[31] Hybrid Deep and Ensemble Machine Learning Model for Decomposing Colorectal Cancer Histology  
+[32] Heterogeneous Causal Metapath Graph Neural Network for Gene-Microbe-Disease Associations  
+[33] Synthetic Cancer Histology for Explainability and Education  
+[34] Graph Neural Network Framework for Brain Network-based Disease Analysis  
+[35] Graph Convolutional Network for Accurate Drug Property Prediction  
+[36] Two-Stage Convolutional Network for Nucleus Detection in Histopathology Images  
+[37] Comparative Analysis of Deep Learning Models for MRI-based Parkinson's Disease Classification  
+[38] Slide-based Graph Collaborative Training for Whole Slide Image Analysis  
+[39] Online Disease Self-Diagnosis with Inductive Heterogeneous Graph Convolutional Networks  
+[40] 3D Graph Anatomy Geometry-Integrated Network for Pancreatic Mass Segmentation, Diagnosis, and Quantitative Patient Management

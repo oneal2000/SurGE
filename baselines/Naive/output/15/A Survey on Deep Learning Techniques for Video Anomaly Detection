@@ -1,0 +1,58 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of deep learning techniques for video anomaly detection (VAD), synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. The integration of diverse approaches, from unsupervised learning to hybrid models, underscores the evolving nature of VAD technology. By critically analyzing the methodologies and results, this survey identifies overarching themes, patterns, and trends, providing a roadmap for researchers and practitioners in the field.
+
+**Introduction:**
+Video anomaly detection (VAD) is a critical task in various applications, including surveillance, traffic monitoring, and healthcare. Traditionally, VAD relied on rule-based systems or hand-crafted features, which were often inadequate for dealing with the complexity and variability of real-world video data. The advent of deep learning has revolutionized VAD, offering more robust and accurate solutions. This survey aims to consolidate knowledge from a vast array of studies to provide researchers and practitioners with a coherent understanding of the current landscape. We categorize and analyze recent advancements in deep learning techniques, focusing on methodologies, results, and implications, while also highlighting challenges and future research directions.
+
+**Main Sections:**
+
+### 1. Methodologies and Contributions
+
+#### 1.1 Semi-Supervised and Weakly Supervised Approaches
+Several studies focus on leveraging limited labeled data for anomaly detection. For instance, Sultani et al. [1] propose a deep multiple instance ranking framework that uses weakly labeled training videos to learn anomaly rankings. Similarly, Wu et al. [2] review semi-supervised, weakly supervised, and fully supervised methods, emphasizing the importance of different levels of supervision in VAD. Baradaran and Bergevin [3] review recent semi-supervised video anomaly detection methods, stressing the importance of selecting appropriate deep neural networks for spatiotemporal feature extraction.
+
+#### 1.2 Unsupervised Methods
+Unsupervised learning approaches aim to detect anomalies without any labeled data. Pavuluri and Annem [4] utilize convolutional autoencoders to learn spatiotemporal patterns of normal videos and compare each frame of a test video to this learned representation, achieving high accuracy on the UCSD dataset. Del Giorno et al. [5] propose a framework for unsupervised anomaly detection in complex videos, while Chong and Tay [6] incorporate temporal evolution of spatial features for high accuracy. Doshi and Yilmaz [7] introduce MOVAD, a modular and unified framework for real-time video anomaly detection, which uses transfer learning, a sequential detector, and a performance metric, surpassing existing methods on benchmark datasets.
+
+#### 1.3 Context-Aware and Transfer Learning
+Context-aware approaches incorporate temporal and spatial context to improve anomaly detection. Yang and Radke [8] introduce Trinity, a contrastive learning framework that learns alignments between context, appearance, and motion, demonstrating strong performance on long-term datasets. Jebur et al. [9] develop a framework that enhances feature generalization through transfer learning and model fusion, achieving high accuracy across multiple datasets. Golan and El-Yaniv [10] developed a technique using geometric transformations to train a multi-class model that discriminates between transformed images, enhancing feature detectors for anomaly identification.
+
+#### 1.4 Spatiotemporal Localization
+Accurate localization of anomalies is crucial for practical applications. Landi et al. [11] explore the impact of considering spatiotemporal tubes instead of whole-frame video segments, showing that networks trained with spatiotemporal tubes perform better than those trained with whole-frame videos. Lu et al. [12] propose a few-shot scene-adaptive anomaly detection method using meta-learning, significantly reducing the need for large amounts of training data. Zhu et al. [13] enhance unsupervised video anomaly detection by exploiting spatial-temporal correlations with spatiotemporal LSTMs and adversarial learning.
+
+#### 1.5 Novel Architectures and Techniques
+Recent studies introduce innovative architectures and techniques to improve anomaly detection. Wang et al. [14] propose the Spatio-Temporal Auto-Transformer Encoder (STATE), which incorporates a learnable convolutional attention module for enhanced consecutive frame reconstruction. Sethi et al. [15] integrate a residual Autoencoder with a two-stream deep convolutional encoder for improved anomaly detection. Aich et al. [16] introduced zxvad, a zero-shot cross-domain video anomaly detection framework using a Normalcy Classifier and an Anomaly Synthesis module.
+
+### 2. Comparative Analysis
+
+The reviewed papers exhibit a range of methodologies and techniques, each addressing specific challenges in VAD. Semi-supervised and weakly supervised methods are particularly useful when labeled data is scarce, while unsupervised methods offer flexibility in deployment. Context-aware and transfer learning approaches leverage additional information to improve detection accuracy, especially in long-term and diverse datasets. Novel architectures like STATE demonstrate the potential of advanced neural network designs in enhancing reconstruction-based methods.
+
+### 3. Advancements and Innovations
+
+Advancements include modular architectures for real-time processing, integrating spatio-temporal dynamics to capture normal patterns, and utilizing pre-trained models to reduce computational costs. Innovations like RandomSEMO and zxvad highlight the importance of focusing on specific video aspects to improve detection performance.
+
+### 4. Implications and Future Directions
+
+The surveyed papers collectively highlight the increasing sophistication of deep learning techniques in VAD. Key advancements include the use of weak supervision, context-aware learning, and innovative neural architectures. These developments not only improve detection accuracy but also reduce the reliance on large labeled datasets, making VAD more feasible for real-world applications. Future research should focus on further refining these techniques, exploring multimodal integration, and addressing ethical considerations such as bias and explainability.
+
+**Conclusion:**
+This survey synthesizes recent advancements in deep learning techniques for video anomaly detection, emphasizing the diversity of approaches and their respective strengths. By categorizing and comparing these methods, we provide insights into the current state of the field and identify promising avenues for future research. The continued evolution of deep learning frameworks and the availability of large, annotated datasets are expected to drive further improvements in VAD, ultimately enhancing security and safety in various domains.
+
+**References:**
+
+[1] Real-world Anomaly Detection in Surveillance Videos  
+[2] Deep Learning for Video Anomaly Detection: A Review  
+[3] A Critical Study on the Recent Deep Learning Based Semi-Supervised Video Anomaly Detection Methods  
+[4] A Deep Learning Approach to Video Anomaly Detection using Convolutional Autoencoders  
+[5] A Discriminative Framework for Anomaly Detection in Large Videos  
+[6] Abnormal Event Detection in Videos using Spatiotemporal Autoencoder  
+[7] A Modular and Unified Framework for Detecting and Localizing Video Anomalies  
+[8] Context-aware Video Anomaly Detection in Long-Term Datasets  
+[9] A Scalable and Generalized Deep Learning Framework for Anomaly Detection in Surveillance Videos  
+[10] Deep Anomaly Detection using Geometric Transformations  
+[11] Anomaly Locality in Video Surveillance  
+[12] Few-shot Scene-adaptive Anomaly Detection  
+[13] Exploiting Spatial-Temporal Correlations for Video Anomaly Detection  
+[14] Making Reconstruction-based Method Great Again for Video Anomaly Detection  
+[15] Video Anomaly Detection using GAN  
+[16] Cross-domain Video Anomaly Detection without Target Domain Adaptation

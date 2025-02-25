@@ -1,0 +1,122 @@
+# Abstract
+This survey paper provides a comprehensive overview of hallucination in Natural Language Generation (NLG), synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Through a meticulous analysis of the literature, we uncover the evolving landscape of hallucination detection and mitigation techniques, emphasizing the importance of robust evaluation frameworks, model refinement, and interdisciplinary collaboration.
+
+# Introduction
+The rapid evolution of Natural Language Generation (NLG) has revolutionized numerous applications, from automated summarization and dialogue systems to data-to-text generation. However, the emergence of large language models (LLMs) has also brought forth a significant challenge: hallucination. Hallucination refers to the generation of fluent but unsupported content, which can undermine the reliability and safety of NLG systems. Despite advancements in fluency and coherence, the issue of hallucination persists, posing risks in real-world applications where accuracy and truthfulness are paramount.
+
+This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape of hallucination in NLG. By synthesizing methodologies, results, and implications from 100 influential papers, we offer a holistic view of the challenges, progress, and future directions in addressing hallucination. Our analysis covers diverse areas, including automated detection, benchmark creation, model refinement, and ethical considerations, providing a comprehensive guide for advancing the field.
+
+# Main Sections
+
+## Overview of Hallucination in NLG
+
+### Definition and Significance
+
+Hallucination in NLG encompasses the generation of text that deviates from factual truth, contradicts established knowledge, or produces inconsistent responses. This phenomenon is significant because it compromises the reliability and trustworthiness of NLG systems, affecting applications ranging from chatbots to automated news articles. The issue of hallucination poses particular challenges in domains such as healthcare, legal documentation, and scientific research, where accuracy and consistency are critical.
+
+### Historical Context
+
+The issue of hallucination has been recognized since the early days of NLG. Early attempts focused on rule-based systems, which were limited by their inability to handle complex linguistic structures and contextual nuances. With the advent of deep learning, particularly sequence-to-sequence models and transformers, NLG systems have achieved unprecedented levels of fluency and coherence. However, these advancements have also led to increased instances of hallucination, necessitating a renewed focus on detection and mitigation strategies.
+
+## Methodologies and Approaches
+
+### Automated Detection Methods
+
+Several papers focus on developing automated methods to detect hallucination in NLG outputs. These methods leverage statistical analysis, neural networks, and benchmark datasets to identify inconsistencies and inaccuracies. For instance, the GLTR tool (Gehrmann et al.) applies baseline statistical methods to identify generation artifacts, while the AEON tool (Huang et al.) evaluates the semantic similarity and naturalness of generated test cases. These automated systems aim to reduce false alarms and improve the reliability of NLP software.
+
+### Benchmark Datasets and Metrics
+
+Creating robust benchmark datasets and metrics is crucial for evaluating the performance of NLG systems in detecting and mitigating hallucination. Notable contributions include the DefAn dataset (Rahman et al.), which comprises over 75,000 prompts across eight domains, and BEAMetrics (Scialom & Hill), a resource for comparing and analyzing existing metrics. These datasets and metrics facilitate a more comprehensive understanding of hallucination across diverse tasks and contexts.
+
+### Model Refinement and Mitigation Techniques
+
+Strategies to mitigate hallucination involve enhancing the training and generation processes of NLG models. Contrastive learning schemes, such as MixCL (Sun et al.), explicitly optimize the knowledge elicitation process of pre-trained language models, reducing hallucination in conversations. Additionally, perturbation-based synthetic data generation (Zhang et al.) demonstrates improved accuracy and latency in detecting hallucinations by rewriting system responses.
+
+### Evaluation Metrics and Human Judgment
+
+The role of human evaluation in assessing the quality and reliability of NLG systems is also explored. Guidelines for conducting human evaluations (Hämäläinen & Alnajjar) emphasize the importance of clear definitions, concrete questions, and multiple evaluation setups. Moreover, the limitations of human judgment in distinguishing AI-generated from human-written text (Köbis & Mossink) highlight the need for automated tools that can reliably detect hallucination.
+
+## Comparative Analysis and Trends
+
+### Robustness and Efficiency
+
+Several papers emphasize the need for robust and computationally efficient solutions to detect and mitigate hallucination. Zero-Shot Multi-task Hallucination Detection (Bhamidipati et al.) proposes a framework that achieves high accuracy in both model-aware and model-agnostic settings while maintaining computational efficiency. This trend underscores the importance of practical solutions that can be readily integrated into existing systems.
+
+### Generalizability and Adaptability
+
+Generalizability is a critical aspect of any solution aimed at addressing hallucination. Papers like CovLLM (Khan et al.) demonstrate the potential of adapting large language models to specific domains, such as COVID-19 biomedical literature, to enhance their applicability and effectiveness. This adaptability is crucial for deploying NLG systems in diverse contexts.
+
+### Human-in-the-Loop and Collaborative Approaches
+
+Many papers highlight the role of human judgment in evaluating and refining NLG systems. For example, GLTR incorporates human feedback to improve detection rates, while Critic-Driven Decoding leverages human-like classifiers to guide the generation process. These collaborative approaches ensure that the generated text aligns more closely with human expectations and standards.
+
+## Key Findings and Implications
+
+### Advancements in Evaluation Metrics
+
+There is a growing recognition of the need for comprehensive evaluation metrics that go beyond traditional similarity-based measures. Papers such as "Towards a Unified Multi-Dimensional Evaluator for Text Generation" (Zhong et al.) propose novel evaluators that align better with human judgments, enabling more nuanced assessments of NLG systems.
+
+### Mitigation Strategies for Hallucination
+
+Effective strategies for mitigating hallucination include the use of causal inference, counterfactual synthesis, and fine-tuning with augmented data. These approaches not only enhance model performance but also provide deeper insights into the underlying mechanisms of hallucination.
+
+### Generalization and Domain Adaptation
+
+Ensuring that NLG models generalize well across different domains remains a significant challenge. Studies like "This Patient Looks Like That Patient: Prototypical Networks for Interpretable Diagnosis Prediction from Clinical Text" (van Aken et al.) underscore the importance of domain-specific adaptations, highlighting the need for models to provide interpretable and contextually relevant outputs.
+
+### Ethical and Societal Considerations
+
+The ethical implications of NLG systems, especially regarding bias and misinformation, are a recurring theme. Papers such as "MoleculeQA: A Dataset to Evaluate Factual Accuracy in Molecular Comprehension" (Lu et al.) emphasize the necessity of rigorous evaluation and continuous monitoring to prevent the propagation of inaccurate or harmful information.
+
+## Future Directions
+
+### Enhanced Evaluation Frameworks
+
+Developing more comprehensive and nuanced evaluation frameworks remains a priority. Perturbation CheckLists (Sai et al.) offer a template for refining automatic evaluation metrics, paving the way for more robust assessments of NLG systems.
+
+### Innovative Mitigation Techniques
+
+Further exploration of innovative techniques to mitigate hallucination is warranted. Methods such as Critic-Driven Decoding and adversarial sub-sequence learning show promise in reducing hallucinations without requiring substantial architectural modifications to existing models.
+
+### Cross-Disciplinary Collaboration
+
+Collaboration between NLP researchers and experts from other fields, such as medicine and law, can lead to more contextually appropriate and reliable NLG systems. CovLLM exemplifies this interdisciplinary approach by adapting language models for specialized domains.
+
+### Ethical Considerations
+
+Addressing ethical considerations, such as bias and fairness, is crucial. Controlled text generation approaches like those discussed by Zheng et al. highlight the importance of invariant learning to ensure that generated text is unbiased and fair across different environments.
+
+# Conclusion
+This survey synthesizes current research on hallucination in NLG, highlighting methodologies, results, and future directions. It underscores the need for comprehensive and context-specific approaches to manage hallucination effectively. By integrating insights from diverse methodologies and applications, we provide a roadmap for advancing the reliability and trustworthiness of NLG systems. Future research should continue to explore innovative solutions that enhance evaluation frameworks, mitigate hallucination, and address ethical considerations, ensuring that NLG remains a valuable and trustworthy tool in a wide range of applications.
+
+# References
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] A Study on the Evaluation of Generative Models  
+[5] Human or Machine: Automating Human Likeliness Evaluation of NLG Texts  
+[6] Genetic Approach to Mitigate Hallucination in Generative IR  
+[7] Detecting Hallucinated Content in Conditional Neural Sequence Generation  
+[8] Controlled Hallucinations: Learning to Generate Faithfully from Noisy Data  
+[9] AutoHall: Automated Hallucination Dataset Generation for Large Language Models  
+[10] Automatic Construction of Evaluation Suites for Natural Language Generation Datasets  
+[11] Evaluating Text GANs as Language Models  
+[12] Likelihood-based Mitigation of Evaluation Bias in Large Language Models  
+[13] LLM Internal States Reveal Hallucination Risk Faced With a Query  
+[14] HalluDial: A Large-Scale Benchmark for Automatic Dialogue-Level Hallucination Evaluation  
+[15] Non-neural Models Matter - A Re-evaluation of Neural Referring Expression Generation Systems  
+[16] DefAn: Definitive Answer Dataset for LLMs Hallucination Evaluation  
+[17] AEON: A Method for Automatic Evaluation of NLP Test Cases  
+[18] SLPL SHROOM at SemEval2024 Task 06: A comprehensive study on models ability to detect hallucination  
+[19] BEAMetrics: A Benchmark for Language Generation Evaluation Evaluation  
+[20] BOLD: Dataset and Metrics for Measuring Biases in Open-Ended Language Generation  
+[21] Contrastive Learning Reduces Hallucination in Conversations  
+[22] Enhancing Hallucination Detection through Perturbation-Based Synthetic Data Generation in System Responses  
+[23] Human Evaluation of Creative NLG Systems: An Interdisciplinary Survey on Recent Papers  
+[24] Artificial Intelligence versus Maya Angelou: Experimental evidence that people cannot differentiate AI-generated from human-written poetry  
+[25] Causal ATE Mitigates Unintended Bias in Controlled Text Generation  
+[26] AutoHallusion: Automatic Generation of Hallucination Benchmarks for Vision-Language Models  
+[27] ConvNLP: Image-based AI Text Detection  
+[28] Towards a Unified Multi-Dimensional Evaluator for Text Generation  
+[29] This Patient Looks Like That Patient: Prototypical Networks for Interpretable Diagnosis Prediction from Clinical Text  
+[30] MoleculeQA: A Dataset to Evaluate Factual Accuracy in Molecular Comprehension

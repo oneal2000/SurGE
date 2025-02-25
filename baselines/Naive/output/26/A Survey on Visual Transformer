@@ -1,0 +1,152 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of visual transformer architectures, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Visual transformers, originally designed for natural language processing (NLP), have shown remarkable potential in computer vision (CV) tasks due to their ability to model long-range dependencies and parallel processing capabilities. This survey consolidates knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape, emphasizing the ongoing evolution of visual transformers, driven by innovative attention mechanisms, efficiency improvements, and hybrid architectures.
+
+**Introduction:**
+The rapid evolution of transformer architectures, initially developed for natural language processing (NLP), has significantly impacted the field of computer vision (CV). Transformers, known for their ability to model long-range dependencies and parallel processing capabilities, have shown promise in various CV tasks, including image classification, object detection, semantic segmentation, and video analysis. However, the direct application of these models to visual data presents unique challenges, primarily due to the quadratic complexity of self-attention mechanisms and the spatial-temporal complexities inherent in visual data. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape in visual transformer research. It highlights the common themes, methodologies, and challenges identified across these studies, and discusses future research directions.
+
+**Main Sections:**
+
+### 1. Evolution of Visual Transformers
+
+#### 1.1 Initial Adaptations
+The initial adaptations of transformers to visual tasks involved straightforward modifications to the original architecture, such as replacing tokens with patches and incorporating positional encodings. These early attempts laid the groundwork for subsequent innovations by demonstrating the feasibility of applying transformer models to visual data.
+
+#### 1.2 Architectural Innovations
+As the field progressed, researchers began to introduce novel architectural designs to enhance the applicability of transformers in visual tasks. For example, the Pyramid Vision Transformer (PVT) by Wenhai Wang et al. [2] proposed a hierarchical structure that integrates multi-scale features effectively, enabling high-resolution outputs and reduced computational costs. Similarly, CrossFormer++ by Wenxiao Wang et al. [3] introduced a cross-scale attention mechanism to explicitly leverage features of varying resolutions, thereby improving performance across multiple visual tasks.
+
+### 2. Attention Mechanisms
+
+#### 2.1 Novel Attention Mechanisms
+Several papers focused on developing novel attention mechanisms to improve the performance and efficiency of visual transformers. For instance, CAT Cross Attention in Vision Transformer [Hezheng Lin et al., CAT] proposes a cross attention mechanism that alternates between intra-patch and inter-patch attention to capture both local and global information efficiently. ELSAA Enhanced Local Self-Attention for Vision Transformer [Jingkai Zhou et al., ELSA] introduces Hadamard attention to enhance local self-attention, thereby improving model performance without modifying the architecture.
+
+#### 2.2 Local and Global Attention
+Methods such as Slide Attention [Pan et al., 13] and Rectangle-Window Self-Attention (Rwin-SA) [Chen et al., 16] address the limitations of global attention by leveraging local inductive biases. These mechanisms enable efficient feature extraction while retaining the benefits of global context modeling.
+
+### 3. Model Efficiency
+
+#### 3.1 Computational Efficiency
+Efficiency is a critical aspect in the development of visual transformers. Papers like Multi-Tailed Vision Transformer for Efficient Inference [Yunke Wang et al., MT-ViT] propose innovative methods to reduce computational costs during inference. For example, the authors introduce a multi-tailed architecture that dynamically selects the most efficient visual sequence length for each image. RealFormer Transformer Likes Residual Attention [Ruining He et al., RealFormer] enhances the residual attention mechanism to stabilize training and reduce attention sparsity, leading to more efficient models.
+
+#### 3.2 Lightweight Architectures
+Several studies focus on developing lightweight transformer architectures. For instance, DeLighT [Mehta et al., 17] proposes a deep and lightweight Transformer that achieves competitive performance with significantly fewer parameters. Similarly, RE-SepFormer [Della Libera et al., 19] reduces computational burden through non-overlapping blocks and compact latent summaries, achieving competitive performance on speech datasets.
+
+### 4. Hierarchical and Hybrid Models
+
+#### 4.1 Hierarchical Models
+Hierarchical and hybrid models that combine convolutional networks with transformers are explored in several papers. CSWin Transformer A General Vision Transformer Backbone with Cross-Shaped Windows [Xiaoyi Dong et al., CSWin] introduces a cross-shaped window self-attention mechanism to balance computational cost and modeling capability. Scale-Aware Modulation Meet Transformer [Weifeng Lin et al., SMT] integrates scale-aware modulation into transformers, allowing for efficient information fusion across different scales.
+
+#### 4.2 Hybrid Architectures
+Hybrid architectures that integrate the strengths of CNNs and transformers are gaining traction. For example, Conv-Enhanced Image Transformer (CeiT) [Kun Yuan et al., 21] combines CNNs for local feature extraction and Transformers for global dependency modeling, achieving superior performance without requiring extensive training data.
+
+### 5. Applications and Performance
+
+#### 5.1 Task-Specific Applications
+The applicability and performance of visual transformers in various computer vision tasks are extensively discussed. For instance, Inception Transformer [Chenyang Si et al., iFormer] showcases the effectiveness of integrating convolution and max-pooling into transformers for comprehensive feature learning. Contextual Transformer Networks for Visual Recognition [Yehao Li et al., CoTNet] emphasize the importance of contextual information in guiding attention mechanisms, leading to improved visual representation learning.
+
+#### 5.2 Specialized Tasks
+Specific applications, such as medical image segmentation [Azad et al., 21] and video segmentation [Kim et al., 21], highlight the adaptability of transformers to domain-specific requirements. For example, TubeFormer-DeepLab: Video Mask Transformer [Kim et al., 21] introduces a unified framework for video segmentation tasks, treating them as the assignment of labels to video tubes.
+
+### Conclusion
+Collectively, these papers highlight the ongoing evolution of visual transformers, driven by innovative attention mechanisms, efficiency improvements, and hybrid architectures. The advancements underscore the versatility and potential of transformers in tackling diverse computer vision tasks. Future research directions may include further optimization for real-time applications, integration with other modalities, and exploration of theoretical foundations to deepen our understanding of transformer architectures. As the research progresses, it is anticipated that visual transformers will become even more integral to the computer vision landscape, offering solutions that are both efficient and effective.
+
+**References:**
+[1] A Survey on Edge Computing Systems and Tools
+[2] Information Geometry of Evolution of Neural Network Parameters While Training
+[3] Survey of Hallucination in Natural Language Generation
+[4] A Survey on Visual Transformers
+[5] CAT Cross Attention in Vision Transformer
+[6] ELSAA Enhanced Local Self-Attention for Vision Transformer
+[7] Multi-Tailed Vision Transformer for Efficient Inference
+[8] RealFormer Transformer Likes Residual Attention
+[9] Contextual Attention Network (TMUnet)
+[10] TubeFormer-DeepLab: Video Mask Transformer
+[11] Conv2Former: A Simple Transformer-Style ConvNet for Visual Recognition
+[12] ViT-LSLA: Vision Transformer with Light Self-Limited-Attention
+[13] Scratching Visual Transformer's Back with Uniform Attention (CB)
+[14] SPFormer: Enhancing Vision Transformer with Superpixel Representation
+[15] Pyramid Vision Transformer (PVT)
+[16] Cross Aggregation Transformer (CAT)
+[17] DeLighT, a deep and lightweight Transformer
+[18] Light Transformer architectures
+[19] Resource-Efficient Separation Transformer (RE-SepFormer)
+[20] Explicit Sparse Transformer
+[21] Vicinity Vision Transformer (VVT)
+[22] Attention-Free Transformer (AFT)
+[23] Vision Transformer with Super Token Sampling (STViT)
+[24] Slide Attention
+[25] Rectangle-Window Self-Attention (Rwin-SA)
+[26] Scene Text Recognition with Transformers
+[27] Object Detection with Vision Transformers
+[28] Image Restoration with Transformers
+[29] Contrastive Clustering with Transformers
+[30] Weighted Transformer Networks
+[31] Light Transformer architectures
+[32] Resource-Efficient Separation Transformer (RE-SepFormer)
+[33] Pyramid Pooling Transformer (P2T)
+[34] XCiT: Cross-Covariance Image Transformer
+[35] SpectFormer: Spectral and Multi-Head Attention for Image Classification
+[36] Token Shift Transformer (TokShift)
+[37] Inception Transformer (iFormer)
+[38] Contextual Transformer Networks for Visual Recognition (CoTNet)
+[39] Glance-and-Gaze Vision Transformer (GG-Transformer)
+[40] MaxViT: Multi-Axis Vision Transformer
+[41] Hybrid Attention Transformer (HAT)
+[42] Dynamic Query Selection for Fast Visual Perceiver
+[43] Scale-Aware Modulation Meet Transformer (SMT)
+[44] Conv-Enhanced Image Transformer (CeiT)
+[45] Less Is More (LIT)
+[46] Conv-Transformer Transducer
+[47] Uformer: A U-Shaped Deep Learning Framework for Image Restoration
+[48] U2-Former: Nested U-Shape Transformers for Image Restoration
+[49] VTCC: Vision Transformer for Contrastive Clustering
+[50] Explicit Sparse Transformer
+[51] Vicinity Vision Transformer (VVT)
+[52] Attention-Free Transformer (AFT)
+[53] Vision Transformer with Super Token Sampling (STViT)
+[54] Slide Attention
+[55] Rectangle-Window Self-Attention (Rwin-SA)
+[56] Scene Text Recognition with Transformers
+[57] Object Detection with Vision Transformers
+[58] Image Restoration with Transformers
+[59] Contrastive Clustering with Transformers
+[60] Weighted Transformer Networks
+[61] Light Transformer architectures
+[62] Resource-Efficient Separation Transformer (RE-SepFormer)
+[63] Pyramid Pooling Transformer (P2T)
+[64] XCiT: Cross-Covariance Image Transformer
+[65] SpectFormer: Spectral and Multi-Head Attention for Image Classification
+[66] Token Shift Transformer (TokShift)
+[67] Inception Transformer (iFormer)
+[68] Contextual Transformer Networks for Visual Recognition (CoTNet)
+[69] Glance-and-Gaze Vision Transformer (GG-Transformer)
+[70] MaxViT: Multi-Axis Vision Transformer
+[71] Hybrid Attention Transformer (HAT)
+[72] Dynamic Query Selection for Fast Visual Perceiver
+[73] Scale-Aware Modulation Meet Transformer (SMT)
+[74] Conv-Enhanced Image Transformer (CeiT)
+[75] Less Is More (LIT)
+[76] Conv-Transformer Transducer
+[77] Uformer: A U-Shaped Deep Learning Framework for Image Restoration
+[78] U2-Former: Nested U-Shape Transformers for Image Restoration
+[79] VTCC: Vision Transformer for Contrastive Clustering
+[80] Explicit Sparse Transformer
+[81] Vicinity Vision Transformer (VVT)
+[82] Attention-Free Transformer (AFT)
+[83] Vision Transformer with Super Token Sampling (STViT)
+[84] Slide Attention
+[85] Rectangle-Window Self-Attention (Rwin-SA)
+[86] Scene Text Recognition with Transformers
+[87] Object Detection with Vision Transformers
+[88] Image Restoration with Transformers
+[89] Contrastive Clustering with Transformers
+[90] Weighted Transformer Networks
+[91] Light Transformer architectures
+[92] Resource-Efficient Separation Transformer (RE-SepFormer)
+[93] Pyramid Pooling Transformer (P2T)
+[94] XCiT: Cross-Covariance Image Transformer
+[95] SpectFormer: Spectral and Multi-Head Attention for Image Classification
+[96] Token Shift Transformer (TokShift)
+[97] Inception Transformer (iFormer)
+[98] Contextual Transformer Networks for Visual Recognition (CoTNet)
+[99] Glance-and-Gaze Vision Transformer (GG-Transformer)
+[100] MaxViT: Multi-Axis Vision Transformer

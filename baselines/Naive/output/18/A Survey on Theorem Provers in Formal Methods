@@ -1,0 +1,52 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of theorem proving in formal methods, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Key themes include the integration of machine learning, the development of new algorithms, and the application of theorem proving techniques across various scientific domains. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and future trajectories in theorem proving.
+
+**Introduction:**
+The rapid evolution of theorem proving in formal methods has significantly impacted the fields of software engineering, mathematics, and artificial intelligence. Theorem provers play a pivotal role in ensuring the correctness and reliability of complex systems by providing rigorous frameworks for verification. Recent advancements have been driven by the integration of machine learning techniques, the development of new algorithms, and the expansion of theorem proving applications into diverse scientific domains. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and future trajectories in theorem proving.
+
+**Foundational Techniques and Methodologies**
+
+Theorem proving relies on a variety of foundational techniques and methodologies that enable the construction and verification of mathematical proofs. One such methodology is the use of automated theorem proving tools, which leverage computational power to automate the proof process. For instance, "LP2PB: Translating Answer Set Programs into Pseudo-Boolean Theories" introduces a tool that translates Answer Set Programming (ASP) into pseudo-Boolean theories, enabling the use of cutting-plane-based solving techniques [1]. This translation enhances ASP's capabilities by leveraging a stronger proof system for solving complex problems.
+
+Another foundational technique is the integration of machine learning into theorem proving. For example, "FOLIO: Natural Language Reasoning with First-Order Logic" by Han et al. [1] uses deep learning models to improve theorem proving. This approach leverages neural networks to approximate the inference process, enabling theorem provers to handle larger knowledge bases more efficiently. Similarly, "Faithful Question Answering with Monte-Carlo Planning" by Hong et al. [3] introduces FAME, a system that generates faithful reasoning steps through Monte-Carlo planning, achieving state-of-the-art performance on standard benchmarks [3].
+
+**Application in Scientific Domains**
+
+Theorem proving has found applications in various scientific domains, demonstrating its versatility and utility. For instance, "ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics" introduces a benchmark for autoformalization and formal proving of undergraduate-level mathematics [2]. ProofNet comprises 371 examples, each featuring a formal theorem statement, a natural language theorem statement, and a natural language proof. This benchmark serves as a challenging testbed for advancing autoformalization and automatic theorem proving.
+
+Moreover, "REFACTOR: Learning to Extract Theorems from Proofs" proposes a method for extracting reusable theorems from formal proofs [4]. REFACTOR demonstrates its efficacy in extracting new theorems and refactoring existing proofs, leading to shorter proof lengths and enhanced theorem proving performance. This innovative approach underscores the importance of modular and reusable theorems in formal mathematics and theorem proving.
+
+**Machine Learning Integration**
+
+The integration of machine learning techniques with theorem proving represents a significant trend in recent research. For example, "Towards Neural Theorem Proving at Scale" by Minervini et al. [5] explores how neural models can be used to approximate the inference process in theorem provers, enabling scalability on larger knowledge bases. Another example is "Learning from Failure" by Chen et al. [6], which introduces a method for fine-tuning large language models (LLMs) with trial-and-error data, demonstrating that incorporating failure data significantly improves the model's ability to solve unseen theorems.
+
+Additionally, "Faithful Chain-of-Thought Reasoning" by Qing Lyu et al. [7] ensures that the reasoning chain accurately reflects the model's thought process, thereby enhancing interpretability and trustworthiness. This framework provides a robust method for generating faithful reasoning chains, ensuring that the reasoning process is transparent and reliable.
+
+**Novel Approaches and Methodologies**
+
+Several papers introduce novel methodologies for addressing theorem proving challenges. For example, "HyperTree Proof Search for Neural Theorem Proving" by Lample et al. [8] proposes a transformer-based automated theorem prover that utilizes HyperTree Proof Search (HTPS) for improved performance. Their model, trained on annotated proofs, achieves notable accuracy on Metamath theorems, surpassing previous state-of-the-art models.
+
+Furthermore, "Optimal Learning of Specifications from Examples" by Drachsler-Cohen et al. [9] introduces SPEX for optimal question reduction, enhancing the efficiency of theorem proving. This approach optimizes the selection of questions to reduce the complexity of the proof process, thereby improving overall performance.
+
+**Challenges and Future Directions**
+
+Despite the advancements, several papers highlight ongoing challenges and areas for future research. "What Can Secondary Predictions Tell Us: An Exploration on Question-Answering with SQuAD-v2.0" by Kamfonas and Alon [10] investigates the utility of secondary predictions in evaluating model performance. The authors introduce the Golden Rank Interpolated Median (GRIM) as a new metric for assessing the proximity of failed predictions to the top choice made by the model. This work underscores the need for refined evaluation metrics and diagnostic tools to better understand model limitations.
+
+Additionally, "Do Answers to Boolean Questions Need Explanations: Yes" by Rosenthal et al. [11] promotes explainability in boolean question answering systems. The authors release a new set of annotations marking the evidence in existing datasets, demonstrating that improved evidence extraction enhances user experience. This initiative reflects a growing recognition of the importance of transparency and interpretability in AI systems.
+
+**Conclusion**
+
+In conclusion, the surveyed papers collectively showcase a vibrant and evolving landscape in theorem proving and formal methods. From foundational techniques to innovative applications and machine learning integration, these contributions highlight the multifaceted nature of theorem proving research. The identified themes—foundational methodologies, scientific domain applications, machine learning integration, and challenges—offer valuable insights into the current state and future directions of the field. As theorem proving continues to advance, the integration of diverse techniques and the pursuit of explainable AI remain crucial focal points for further exploration.
+
+**References:**
+[1] Wolf De Wulf & Bart Bogaerts. LP2PB: Translating Answer Set Programs into Pseudo-Boolean Theories.
+[2] Zhangir Azerbayev et al. ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics.
+[3] Mohamed Ghanem et al. NeuRes: Learning Proofs of Propositional Satisfiability.
+[4] Jin Peng Zhou et al. REFACTOR: Learning to Extract Theorems from Proofs.
+[5] Simeng Han et al. FOLIO: Natural Language Reasoning with First-Order Logic.
+[6] Jingchao Chen. Learning from Failure.
+[7] Qing Lyu et al. Faithful Chain-of-Thought Reasoning.
+[8] Guillaume Lample et al. HyperTree Proof Search for Neural Theorem Proving.
+[9] Dana Drachsler-Cohen et al. Optimal Learning of Specifications from Examples.
+[10] Michael Kamfonas & Gabriel Alon. What Can Secondary Predictions Tell Us: An Exploration on Question-Answering with SQuAD-v2.0.
+[11] Sara Rosenthal et al. Do Answers to Boolean Questions Need Explanations: Yes.

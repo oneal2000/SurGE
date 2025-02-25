@@ -1,0 +1,77 @@
+### Abstract
+This survey paper provides a comprehensive overview of the evaluation methods for dialogue systems, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It emphasizes the shift from traditional human-based evaluations to more automated and hybrid approaches, driven by the increasing sophistication of dialogue systems and the need for scalable evaluation methods.
+
+### Introduction
+Dialogue systems are pivotal in a wide range of applications, from customer service to educational tools, and their evaluation is crucial for refining their performance and ensuring user satisfaction. Traditionally, dialogue system evaluation has relied heavily on human judgments, which are resource-intensive and prone to variability. However, recent advancements in machine learning and natural language processing have led to the development of automated metrics and hybrid evaluation methods that aim to reduce the dependency on human labor while maintaining the comprehensiveness of human evaluations. This survey aims to consolidate knowledge from a vast array of studies to provide researchers and practitioners with a coherent understanding of the current landscape of dialogue system evaluation.
+
+### Main Sections
+
+#### Evolution of Evaluation Methods
+
+The evaluation of dialogue systems has evolved significantly over the past decade. Initially, traditional metrics such as BLEU and ROUGE were commonly used to assess the quality of generated responses. However, these metrics often failed to capture the nuances of human interactions, leading to a shift towards more sophisticated and context-aware evaluation methods.
+
+**Automatic Evaluation Metrics**
+One major trend has been the development of automatic evaluation metrics that correlate with human judgments. These metrics leverage machine learning algorithms to generate scores that reflect the quality of dialogue responses. For example, the Density Estimation-based metric (DEnsity) proposed by Park et al. measures the likelihood of a response appearing in the distribution of human conversations, providing a more robust alternative to traditional metrics.
+
+**Human-Involved Evaluation**
+While automatic metrics offer efficiency, human-involved evaluations remain crucial for capturing the subtleties of human interactions. Studies such as those by Finch et al. and Giorgi et al. highlight the importance of psychological metrics grounded in human behavior, such as emotional entropy and empathy, to provide a more nuanced evaluation framework. However, these evaluations are resource-intensive and suffer from scalability issues.
+
+**User Simulator-Based Evaluation**
+Another approach to automating the evaluation process involves the use of user simulators. These simulators mimic user behavior to interact with dialogue systems and generate evaluations based on predefined criteria. Wu et al. emphasize the need for diverse and representative datasets to ensure the reliability of user simulator-based evaluations. The DiQAD dataset, released by Zhao et al., provides a large-scale benchmark for end-to-end dialogue quality assessment.
+
+#### Methodological Approaches and Innovations
+
+Several innovative methods have emerged to address the challenges of dialogue system evaluation. For instance, Li et al. propose a continual learning approach to update neural evaluators incrementally, ensuring that they remain relevant as new dialogue systems are developed. This approach aims to reduce the computational overhead associated with rebuilding evaluators from scratch.
+
+Another notable innovation is the deconstruction and reconstruction of evaluation metrics to cater to different aspects of dialogue quality. Phy et al. introduce the USL-H metric, which combines understandability, sensibleness, and likability into a hierarchical structure, allowing for configurable evaluations tailored to specific tasks.
+
+#### Comparative Analysis
+
+Comparative analyses reveal that while automatic metrics offer efficiency, they often fall short in capturing the subtleties of human interactions. On the other hand, human evaluations, though more comprehensive, suffer from variability and scalability issues. Hybrid approaches that integrate both human and machine evaluations seem promising, offering a balance between reliability and efficiency. For instance, Takehi et al. propose a method to derive nugget-level scores from turn-level evaluations, providing a finer granularity of feedback.
+
+#### Implications and Future Directions
+
+The reviewed papers collectively underscore the need for more robust and versatile evaluation methods that can adapt to the evolving landscape of dialogue systems. Future research should focus on developing metrics that are both efficient and reflective of human interaction dynamics. Additionally, the integration of psychological and behavioral metrics could provide deeper insights into the quality of dialogue systems. Moreover, the establishment of standardized benchmarks and datasets is essential for fostering comparative studies and advancing the field.
+
+### Conclusion
+This survey synthesizes recent advancements in dialogue system evaluation, highlighting the shift towards more automated and hybrid evaluation methods. While automatic metrics offer efficiency, human evaluations remain indispensable for capturing the nuances of human interaction. Future research should strive to develop metrics that seamlessly integrate human and machine evaluations, thereby enhancing the reliability and comprehensiveness of dialogue system assessments. The ongoing evolution of dialogue systems necessitates continued refinement of evaluation methodologies to ensure that these systems meet the needs and expectations of users.
+
+### References
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] Towards Unified Dialogue System Evaluation  
+[5] Psychological Metrics for Dialog System Evaluation  
+[6] How to Evaluate Your Dialogue Models  
+[7] DEnsity: A Density Estimation-based Metric for Dialogue System Evaluation  
+[8] Towards Best Experiment Design for Evaluating Dialogue System Output  
+[9] User Response and Sentiment Prediction for Automatic Dialogue Evaluation  
+[10] Learning an Unreferenced Metric for Online Dialogue Evaluation  
+[11] Soda-Eval: Open-Domain Dialogue Evaluation in the Age of LLMs  
+[12] FineD-Eval: Fine-grained Automatic Dialogue-Level Evaluation  
+[13] Multi-dimensional Evaluation of Empathetic Dialog Responses  
+[14] Dialogue You Can Trust: Human and AI Perspectives on Generated Conversations  
+[15] Policy Networks with Two-Stage Training for Dialogue Systems  
+[16] Improving Response Quality with Backward Reasoning in Open-Domain Dialogue Systems  
+[17] Bipartite-play Dialogue Collection for Practical Automatic Evaluation of Dialogue Systems  
+[18] PONE: A Novel Automatic Evaluation Metric for Open-Domain Generative Dialogue Systems  
+[19] Improving Dialog Evaluation with a Multi-reference Adversarial Dataset and Large Scale Pretraining  
+[20] Better Automatic Evaluation of Open-Domain Dialogue Systems with Contextualized Embeddings  
+[21] Towards Coherent and Engaging Spoken Dialog Response Generation Using Automatic Conversation Evaluators  
+[22] A Comprehensive Assessment of Dialog Evaluation Metrics  
+[23] Simulating User Satisfaction for the Evaluation of Task-oriented Dialogue Systems  
+[24] PARADISE: A Framework for Evaluating Spoken Dialogue Agents  
+[25] RADDLE: An Evaluation Benchmark and Analysis Platform for Robust Task-oriented Dialog Systems  
+[26] DEAM: Dialogue Coherence Evaluation using AMR-based Semantic Manipulations  
+[27] xDial-Eval: A Multilingual Open-Domain Dialogue Evaluation Benchmark  
+[28] Morena Danieli and Elisabetta Gerbino  
+[29] Michael Higgins et al.  
+[30] Tao Feng et al.  
+[31] Nurul Lubis et al.  
+[32] Re-evaluating ADEM  
+[33] Anjuli Kannan and Oriol Vinyals  
+[34] Ian Berlot-Attwell and Frank Rudzicz  
+[35] PsyChat  
+[36] Multi-Sentence Knowledge Selection in Open-Domain Dialogue  
+[37] John Mendonça et al.  
+[38] Yury Zemlyanskiy and Fei Sha

@@ -1,0 +1,97 @@
+# Abstract
+
+This survey paper provides a comprehensive overview of the advancements in community detection with deep learning, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key methodologies, results, challenges, and trends, offering insights into the current landscape and future research directions. By integrating insights from various domains, this survey aims to consolidate knowledge and provide researchers with a coherent understanding of the evolving field of community detection.
+
+# Introduction
+
+Community detection, a fundamental task in network analysis, involves identifying densely connected groups of nodes within a network. Traditionally, methods such as spectral clustering, modularity optimization, and statistical inference have been widely used. However, the advent of deep learning has brought about a paradigm shift, enabling the handling of high-dimensional and complex network data more effectively. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape of community detection with deep learning. We explore the methodologies, applications, challenges, and future directions in this field, emphasizing the integration of auxiliary data, deep learning techniques, and probabilistic frameworks.
+
+# Main Sections
+
+## Methodologies and Approaches
+
+### Overview of Methodologies
+
+Community detection methodologies have evolved significantly with the incorporation of deep learning techniques. These methods can broadly be categorized into traditional approaches enhanced with deep learning and purely deep learning-based approaches.
+
+#### Traditional Approaches Enhanced with Deep Learning
+
+Traditional community detection methods, such as spectral clustering and ensemble clustering, have been adapted to incorporate deep learning principles. For instance, spectral clustering methods transform network data into low-dimensional representations, which are then clustered using deep learning techniques. Ensemble clustering methods, such as EnDisCO and MeDOC, combine multiple base solutions to detect disjoint and overlapping communities, leveraging the strengths of different algorithms to improve robustness and accuracy.
+
+#### Pure Deep Learning Approaches
+
+Pure deep learning approaches include the use of deep neural networks, graph attention networks (GATs), generative adversarial networks (GANs), and autoencoders. Convolutional neural networks (CNNs) extract hierarchical features from network data, making them particularly useful for handling high-dimensional data. GATs assign weights to edges based on the importance of different neighbors, providing a flexible framework for capturing complex relationships. GANs generate synthetic networks that mimic the properties of real-world networks, aiding in the detection of communities. Autoencoders learn compact representations of nodes, which can then be clustered to form communities.
+
+### Integration of Auxiliary Data
+
+Several studies have explored the integration of auxiliary data, such as node attributes and geographical information, to enhance community detection. For instance, methods that consider geographical proximity alongside network connectivity improve detection accuracy. CESNA, an algorithm that simultaneously models network structure and node attributes, demonstrates improved robustness and interpretability. These approaches leverage additional data modalities to provide a more comprehensive view of network structures.
+
+### Algorithmic Innovations
+
+Algorithmic innovations continue to shape the landscape of community detection. The Leader-Follower Algorithm (LFA) achieves high accuracy and near-linear scalability by leveraging a generative model for community formation. The GenPerm framework maximizes a vertex-based metric to detect both non-overlapping and overlapping communities, outperforming several state-of-the-art algorithms. These advancements highlight the importance of developing algorithms that are both efficient and accurate.
+
+## Practical Applications and Implications
+
+Community detection has numerous practical applications across various domains. In social and political science, it aids in understanding the dynamics of social networks and political affiliations. In neuroscience, it helps in mapping brain networks and understanding neural connectivity. In genetics, it assists in identifying gene clusters and regulatory pathways. The integration of node covariates and network connections enhances the accuracy of community detection in sparse networks, providing valuable insights into complex systems.
+
+## Challenges and Future Directions
+
+Despite significant advancements, several challenges remain in the field of community detection with deep learning. These include the need for robust algorithms that can handle noisy and incomplete data, the scalability of methods to very large networks, and the interpretability of community structures. Future research should focus on addressing these challenges and exploring new applications of community detection, such as in dynamic networks and multi-layer networks.
+
+### Challenges
+
+1. **Robustness**: Developing algorithms that are robust to noise and variations in network structure is crucial for reliable community detection.
+2. **Scalability**: Handling large-scale networks efficiently remains a challenge, requiring scalable algorithms that can process data in real-time.
+3. **Interpretability**: Ensuring that community detection results are interpretable and actionable is essential for practical applications.
+
+### Future Directions
+
+1. **Dynamic Networks**: Exploring methods for detecting communities in evolving networks, where network structures change over time.
+2. **Multi-Layer Networks**: Investigating the detection of communities in multi-layer networks, where nodes are connected through multiple types of interactions.
+3. **Cross-Disciplinary Applications**: Expanding the applicability of community detection methods to diverse fields such as social sciences, biology, and cybersecurity.
+4. **Integration of External Signals**: Incorporating external signals, such as temporal data and spatial information, to enhance the accuracy and relevance of community detection.
+
+# Conclusion
+
+This survey provides a comprehensive overview of the advancements in community detection with deep learning, highlighting the integration of auxiliary data, deep learning techniques, and probabilistic frameworks. By synthesizing the contributions of various methodologies, models, and algorithms, we offer a detailed insight into the current landscape of community detection. The integration of deep learning techniques has not only improved the performance of community detection but also opened up new avenues for research and application. Future work should continue to explore innovative methods and address the remaining challenges to further advance the field.
+
+# References
+
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] Community Detection from Location-Tagged Networks  
+[5] Community Detection in Networks with Node Attributes  
+[6] Debiasing Community Detection: The Importance of Lowly-Connected Nodes  
+[7] GenPerm: A Unified Method for Detecting Non-overlapping and Overlapping Communities  
+[8] Leaders, Followers, and Community Detection  
+[9] A Local Method for Detecting Communities  
+[10] Debiasing Community Detection Evaluation  
+[11] Benchmarking community detection methods on social media data  
+[12] A Survey on Theoretical Advances of Community Detection in Networks  
+[13] Geosocial Graph-Based Community Detection  
+[14] Bi-Objective Community Detection (BOCD) in Networks using Genetic Algorithm  
+[15] Community detection in node-attributed social networks: a survey  
+[16] A Systematic Survey on Multi-relational Community Detection  
+[17] Generative models for local network community detection  
+[18] Machine-Learning Based Objective Function Selection for Community Detection  
+[19] Community Detection using a Measure of Global Influence  
+[20] Network Community Detection on Metric Space  
+[21] Community detection in networks without observing edges  
+[22] Revealing Multiple Layers of Hidden Community Structure in Networks  
+[23] KroMFac: A Regularized Non-Negative Matrix Factorization Framework for Community Detection  
+[24] Correlation-Based Community Evaluation Functions  
+[25] A Divide-and-Conquer Algorithm for Detecting Community Structures in Large Networks  
+[26] Density-Based Community Detection in Complex Networks  
+[27] Adaptive Sampling Strategies for Community Detection  
+[28] Online Overlapping Community Detection  
+[29] Critical Assessment of Normalized Mutual Information as a Metric for Evaluating Community Detection Algorithms  
+[30] Mesoscale Structure in Nervous Systems: Guidelines for Applying Community Detection Methods  
+[31] A Multi-Resolution Community Detection Algorithm  
+[32] Ensemble approaches for improving community detection methods  
+[33] A framework for community detection in heterogeneous multi-relational networks  
+[34] Community detection using boundary nodes in complex networks  
+[35] Superpixels algorithms through network community detection  
+[36] Latent heterogeneous multilayer community detection  
+[37] Hidden community detection in social networks  
+[38] Vertex-centred method to detect communities in evolving networks

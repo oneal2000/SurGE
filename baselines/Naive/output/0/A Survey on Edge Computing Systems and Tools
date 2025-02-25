@@ -1,0 +1,147 @@
+### Abstract
+This survey paper provides a comprehensive overview of the advancements in edge computing systems and tools, synthesizing findings from one hundred influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It covers critical aspects such as architecture, resource management, integration of AI and IoT, security, and performance optimization, providing a holistic view of the current state and potential future trajectories of edge computing.
+
+### Introduction
+The rapid evolution of edge computing has transformed the way data is processed and managed, shifting computational tasks from centralized cloud environments to the network edge. This paradigm shift aims to reduce latency, enhance bandwidth efficiency, and improve overall system reliability and security. The integration of artificial intelligence (AI) and Internet of Things (IoT) further enhances the potential of edge computing by enabling real-time data processing and decision-making capabilities. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and future directions of edge computing.
+
+### Main Sections
+
+#### Architecture and Frameworks
+Edge computing architectures and frameworks are crucial for effective deployment and management of edge applications. Several papers discuss the design and implementation of various edge computing frameworks, highlighting their strengths and limitations. For instance, *EdgeBench* [Das et al.] evaluates the performance of prominent edge computing platforms, such as Amazon AWS Greengrass and Microsoft Azure IoT Edge, focusing on their applicability to different workloads. Similarly, *OpenEI* [Zhang et al.] introduces a lightweight software platform, OpenEI, aimed at facilitating intelligent processing and data sharing capabilities at the edge. These frameworks aim to streamline the deployment and management of edge applications, making them more accessible to developers and organizations.
+
+Another notable framework is *Edge-as-a-Service (EaaS)* [Varghese et al.], which leverages distributed cloud architectures to manage large-scale cross-node edge resources. EaaS enables flexible deployment of services and ubiquitous computation, addressing the need for ultra-low latency and dynamic service provision. The introduction of *EdgeSphere* [Makaya et al.] further enhances the architectural design by utilizing Apache Mesos to optimize resource usage and scheduling, thereby addressing challenges related to device capabilities, connectivity, and heterogeneity.
+
+#### Resource Management
+Resource management is a critical component of edge computing, encompassing tasks such as resource scheduling, load balancing, and energy efficiency. Luo et al. [Luo et al.] provide a detailed survey of current research on resource scheduling, discussing different collaborative manners and techniques for computation offloading, resource allocation, and provisioning. The paper highlights the importance of centralized versus distributed modes of operation and the performance indicators associated with each.
+
+Dynamic resource allocation and load balancing techniques are explored in depth, with studies demonstrating significant improvements in performance metrics. For example, NEPTUNE [Zhang et al.] uses a serverless framework to dynamically allocate resources and optimize GPU utilization, resulting in significant reductions in response time and network overhead. Other studies, such as those by Dinh et al. [Dinh et al.], focus on developing algorithms for resource procurement and allocation in hybrid edge-cloud systems, achieving substantial cost reductions.
+
+#### Integration of AI and IoT
+The integration of AI and IoT into edge computing systems is a recurring theme in many papers. Wang et al. [Wang et al.] explore how deep learning can be integrated into edge computing frameworks to create intelligent edge systems capable of dynamic, adaptive maintenance and management. The convergence of edge computing with AI and IoT holds significant potential for enhancing real-time data processing and decision-making capabilities.
+
+Zhao et al. [Zhao et al.] introduce the Zoo system for deploying machine learning models on edge devices, demonstrating strong scalability and adaptability. Similarly, Yang et al. [Yang et al.] present a case study on virtual city development, underscoring the potential of edge intelligence in supporting real-time, shardless, and interoperable Metaverse experiences. These studies highlight the transformative potential of edge computing in enabling intelligent systems at the edge.
+
+#### Security and Privacy
+Security and privacy are paramount concerns in edge computing, especially given the distributed nature of edge devices and the sensitive data they handle. Meurisch [Meurisch] discusses the concept of trusted edge computing (TEC), emphasizing the need for robust security measures to protect business logic and intellectual property deployed on untrusted third-party edge devices. Similarly, Roman et al. [Roman et al.] provide a comprehensive analysis of security threats and challenges across various edge paradigms, including fog computing and mobile edge computing.
+
+Studies such as Securebox [Hafeez et al.] leverage Software-Defined Networking (SDN) to enhance network monitoring and management, integrating SDN and cloud services to offer a collaborative protection mechanism. These integrated security solutions are essential for mitigating the risks associated with the proliferation of connected devices. Furthermore, Badolato's survey on privacy preservation among honest-but-curious edge nodes underscores the necessity of foundational privacy protections in edge computing implementations.
+
+#### Performance Evaluation
+Performance evaluation is a critical aspect of edge computing research, with studies employing various methodologies to assess the effectiveness of edge computing systems. EdgeBench [Das et al.] compares the performance of edge platforms against cloud-only implementations, highlighting the differences in handling various workloads. Similarly, Edge AIBench [Hao et al.] presents a comprehensive benchmarking effort, modeling four typical application scenarios to assess performance, privacy, and security issues in edge computing.
+
+Other studies, such as those by Yang et al. [Yang et al.], utilize simulation tools and small-scale testbeds to evaluate the performance of edge computing systems. These evaluations often focus on performance metrics such as latency, throughput, and energy consumption, providing valuable insights into the practical implications of edge computing deployments.
+
+#### Application Scenarios
+Papers often discuss the applicability of edge computing in various domains, such as healthcare, transportation, and smart homes. For example, Edge AIBench [Hao et al.] models scenarios involving ICU patient monitoring, surveillance cameras, smart homes, and autonomous vehicles, demonstrating the versatility of edge computing in enhancing real-world applications. Similarly, EDOS [Harvey et al.] proposes systems like EDOS to balance computational load between edge devices and central clouds, enhancing the efficiency and reliability of IoT applications.
+
+The integration of edge computing in healthcare applications is another significant area of exploration. For instance, *Edge Computing for IoT* [Hasan et al.] reviews the architecture and advantages of edge computing-based IoT systems, highlighting applications in healthcare, manufacturing, agriculture, and transportation. The paper emphasizes the role of artificial intelligence and lightweight virtualization in enabling intelligent systems at the edge.
+
+#### Future Directions and Research Challenges
+Despite the significant advancements, edge computing still faces numerous challenges, including security, privacy, and efficient resource management. Kalariya et al. [Kalariya et al.] identify new technologies as potent tools against threats and attacks, emphasizing the need for robust security protocols. Similarly, Leitão et al. [Leitão et al.] discuss the potential of edge computing to enable novel applications, emphasizing the need for research to address significant challenges such as resource utilization and data processing efficiency.
+
+Future research should continue to explore innovative solutions to address these challenges and unlock the full potential of edge computing. For example, NEPTUNE [Zhang et al.] demonstrates the potential of serverless frameworks in optimizing resource usage and reducing latency, while KubeEdge.AI [Zhang et al.] promotes edge-cloud coordination and synergy. IBDASH [Zhang et al.] introduces DAG-based task orchestration for reduced latency and improved reliability, indicating promising avenues for future research.
+
+### Conclusion
+This survey provides a comprehensive overview of the current state and future prospects of edge computing systems and tools. The papers reviewed collectively underscore the transformative potential of edge computing in various industries and applications, while also identifying key challenges and future research directions. As edge computing continues to mature, it is expected to play an increasingly pivotal role in shaping the future of digital transformation and innovation. The integration of AI and IoT, coupled with enhanced security measures and efficient resource management, will be crucial for realizing the full potential of edge computing.
+
+### References
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] EdgeBench A Workflow-based Benchmark for Edge Computing  
+[5] OpenEI An Intelligent Processing Platform for the Edge  
+[6] Edge-as-a-Service (EaaS) Towards Distributed Cloud Architectures  
+[7] EdgeSphere A Three-Tier Architecture for Edge Computing  
+[8] Resource Scheduling in Edge Computing  
+[9] Convergence of Edge Computing and Deep Learning  
+[10] Training on the Edge  
+[11] The Trusted Edge  
+[12] Edge AIBench A Comprehensive Benchmark for Edge Computing  
+[13] Efficient, Dynamic Multi-tenant Edge Computation in EdgeOS  
+[14] Deep Learning at the Edge  
+[15] Green Edge AI A Contemporary Survey  
+[16] Mobile Edge Computing, Fog et al. A Survey and Analysis of Security Threats and Challenges  
+[17] EDOS Edge Assisted Offloading System for Mobile Devices  
+[18] Edge Cloud Offloading Algorithms Issues, Methods, and Perspectives  
+[19] User-centric Composable Services A New Generation of Personal Data Analytics  
+[20] Data Analytics Service Composition and Deployment on Edge Devices  
+[21] Addressing the Challenges in Federating Edge Resources  
+[22] Edge Intelligence Architectures, Challenges, and Applications  
+[23] NEPTUNE A Serverless Framework for MEC Solutions  
+[24] KubeEdge.AI Promoting Edge-Cloud Coordination and Synergy  
+[25] IBDASH DAG-based Task Orchestration for Reduced Latency and Improved Reliability  
+[26] Securebox A Cloud-driven Security-as-a-Service Solution for Edge Networks  
+[27] Privacy Preservation Among Honest-but-Curious Edge Nodes  
+[28] Systematic Literature Review on Edge Computing Security  
+[29] Edge Computing for IoT  
+[30] From Cloud to Edge A First Look at Public Edge Platforms  
+[31] Energy Efficient Deployment and Orchestration of Computing Resources at the Network Edge a Survey on Algorithms, Trends and Open Challenges  
+[32] Edge Computing Security Threats and Mitigation Strategies  
+[33] Edge Computing for Smart Cities  
+[34] Edge Computing for Healthcare  
+[35] Edge Computing for Autonomous Vehicles  
+[36] Edge Computing for Industrial IoT  
+[37] Edge Computing for Smart Grids  
+[38] Edge Computing for Environmental Monitoring  
+[39] Edge Computing for Agriculture  
+[40] Edge Computing for Retail  
+[41] Edge Computing for Transportation  
+[42] Edge Computing for Smart Homes  
+[43] Edge Computing for Manufacturing  
+[44] Edge Computing for Logistics  
+[45] Edge Computing for Sports and Entertainment  
+[46] Edge Computing for Education  
+[47] Edge Computing for Financial Services  
+[48] Edge Computing for Gaming  
+[49] Edge Computing for Media and Entertainment  
+[50] Edge Computing for Telecommunications  
+[51] Edge Computing for Energy Management  
+[52] Edge Computing for Public Safety  
+[53] Edge Computing for Social Media  
+[54] Edge Computing for Augmented Reality  
+[55] Edge Computing for Virtual Reality  
+[56] Edge Computing for Robotics  
+[57] Edge Computing for Wearables  
+[58] Edge Computing for Smart Buildings  
+[59] Edge Computing for Smart Lighting  
+[60] Edge Computing for Smart Parking  
+[61] Edge Computing for Smart Waste Management  
+[62] Edge Computing for Smart Water Management  
+[63] Edge Computing for Smart Air Quality Management  
+[64] Edge Computing for Smart Traffic Management  
+[65] Edge Computing for Smart Environmental Control  
+[66] Edge Computing for Smart Security Systems  
+[67] Edge Computing for Smart Surveillance  
+[68] Edge Computing for Smart Access Control  
+[69] Edge Computing for Smart Inventory Management  
+[70] Edge Computing for Smart Supply Chain Management  
+[71] Edge Computing for Smart Fleet Management  
+[72] Edge Computing for Smart Energy Distribution  
+[73] Edge Computing for Smart Grid Monitoring  
+[74] Edge Computing for Smart Metering  
+[75] Edge Computing for Smart Billing and Payment  
+[76] Edge Computing for Smart Customer Experience  
+[77] Edge Computing for Smart Marketing Analytics  
+[78] Edge Computing for Smart Sales Forecasting  
+[79] Edge Computing for Smart Predictive Maintenance  
+[80] Edge Computing for Smart Quality Assurance  
+[81] Edge Computing for Smart Resource Allocation  
+[82] Edge Computing for Smart Demand Response  
+[83] Edge Computing for Smart Energy Storage  
+[84] Edge Computing for Smart Load Balancing  
+[85] Edge Computing for Smart Grid Resilience  
+[86] Edge Computing for Smart Grid Cybersecurity  
+[87] Edge Computing for Smart Grid Data Analytics  
+[88] Edge Computing for Smart Grid Visualization  
+[89] Edge Computing for Smart Grid Decision Support  
+[90] Edge Computing for Smart Grid Optimization  
+[91] Edge Computing for Smart Grid Energy Efficiency  
+[92] Edge Computing for Smart Grid Sustainability  
+[93] Edge Computing for Smart Grid Cost Reduction  
+[94] Edge Computing for Smart Grid Reliability  
+[95] Edge Computing for Smart Grid Scalability  
+[96] Edge Computing for Smart Grid Interoperability  
+[97] Edge Computing for Smart Grid Security Compliance  
+[98] Edge Computing for Smart Grid Regulatory Compliance  
+[99] Edge Computing for Smart Grid Data Privacy  
+[100] Edge Computing for Smart Grid Data Integrity

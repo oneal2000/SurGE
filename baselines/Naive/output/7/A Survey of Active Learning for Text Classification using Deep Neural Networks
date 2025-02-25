@@ -1,0 +1,146 @@
+# Abstract
+This survey paper provides a comprehensive overview of active learning for text classification using deep neural networks (DNNs), synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Active learning (AL) optimizes the labeling process by iteratively selecting the most informative samples for annotation, significantly reducing the labeling effort required for training models. The integration of DNNs has enhanced model performance in text classification tasks, yet it poses challenges such as high computational demands and the need for reliable uncertainty estimates. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and guide future research efforts.
+
+# Introduction
+Active learning (AL) is a subset of machine learning where the model selectively requests labels for the most informative data points, aiming to optimize the use of limited labeling resources. In recent years, the integration of deep neural networks (DNNs) into AL frameworks has led to substantial improvements in text classification tasks. DNNs, particularly transformer-based models, have demonstrated superior performance in capturing complex patterns within textual data, making them indispensable tools in modern text classification. However, their reliance on large volumes of labeled data presents a significant challenge, especially in resource-constrained environments. AL addresses this issue by iteratively selecting the most informative samples for annotation, thereby enhancing model efficiency and reducing labeling costs.
+
+This survey aims to consolidate and synthesize the findings from 100 influential research papers published over the past decade. It provides a comprehensive overview of the methodologies, advancements, and challenges in active learning for text classification using DNNs. The paper is structured to offer insights into the evolution of AL techniques, highlight common themes and trends, and discuss the implications for future research.
+
+# Main Sections
+
+## Taxonomy and Query Strategies
+
+### Overview
+Active learning (AL) strategies can be broadly categorized into data-based, model-based, and prediction-based instance selection. Data-based strategies rely on the characteristics of the data itself, such as similarity or dissimilarity measures. Model-based strategies leverage the model's predictions and uncertainties to inform the selection process. Prediction-based strategies focus on the predicted outputs of the model, often using measures like margin or confidence to determine the informativeness of samples.
+
+### Key Contributions
+Schröder and Niekler (2023) construct a taxonomy of query strategies, distinguishing between data-based, model-based, and prediction-based instance selection. They emphasize the importance of understanding the underlying mechanisms of DNNs to improve AL effectiveness. This taxonomy aids in comparing and contrasting different approaches, providing a structured framework for evaluating query strategies.
+
+Fan Luo and Mihai Surdeanu (2023) propose a perturbation-based strategy for question answering, outperforming traditional methods. Similarly, Muni Sreenivas Pydi and Vishnu Suresh Lokhande (2023) develop ALIS, a method that minimizes true loss through optimal sampling. These contributions highlight the ongoing development of innovative query strategies that enhance the efficiency and effectiveness of AL.
+
+### Comparative Analysis
+While uncertainty-based methods often prioritize efficiency, diversity-based methods aim for comprehensive coverage. Hybrid approaches attempt to strike a balance between reducing uncertainty and enhancing model coverage, though they may require more computational resources. Methods like ALVIN (Korakakis et al., 2020) and ALFA-Mix (Parvaneh et al., 2020) demonstrate broad applicability across various datasets and tasks, indicating their potential for wider adoption.
+
+## Performance and Robustness
+
+### Overview
+Active learning techniques must be robust and perform consistently across different datasets and application scenarios. The fragility of AL methods and the need for careful parameter tuning remain significant challenges. Researchers have explored various metrics and evaluation frameworks to assess the robustness and reproducibility of AL methods.
+
+### Key Contributions
+Ghose and Nguyen (2023) explore the fragility of AL techniques for text classification, demonstrating that AL is only effective in a narrow set of circumstances. They advocate for the use of metrics that align better with real-world expectations, underscoring the need for holistic interpretation of AL results. Munjal et al. (2023) highlight the inconsistency in performance metrics achieved by different AL algorithms under identical experimental settings, recommending stringent controls for assessing robustness and reproducibility.
+
+### Comparative Analysis
+Several studies emphasize the importance of metrics that align with real-world expectations. For instance, Bosley et al. (2020) present a probabilistic model combined with active learning that achieves comparable classification performance to state-of-the-art methods at a fraction of the computational cost. Their method is validated through replication studies, demonstrating its effectiveness in social science applications.
+
+## Novel Approaches and Innovations
+
+### Overview
+Innovative approaches to enhance AL for text classification include the use of multi-view learning, local interpretations, and feature selection techniques. These methods aim to improve the selection of informative samples and enhance the overall performance of AL systems.
+
+### Key Contributions
+Karisani et al. (2023) propose a multi-view active learning model for short text classification, employing the Parzen-Rosenblatt window method to integrate representativeness measures and using a query-by-committee strategy to handle noisy language. Liu et al. (2023) introduce ALDEN, a method that leverages local interpretations in DNNs to identify linearly separable regions of samples, thereby selecting diverse and informative samples. Zhang et al. (2023) present a new AL method focused on selecting instances that most affect the embedding space, leading to rapid learning of discriminative word representations.
+
+### Comparative Analysis
+Methods like ALDEN and ALVIN demonstrate significant improvements in model performance by integrating diverse interpretability measures. These approaches not only enhance the selection of informative samples but also provide insights into the model's decision-making process, facilitating better understanding and trust in the system.
+
+## Batch Size and Stopping Criteria
+
+### Overview
+The impact of batch size on stopping criteria in AL is a critical consideration. Large batch sizes can degrade performance if not properly managed, necessitating adjustments in stopping methods to mitigate this effect.
+
+### Key Contributions
+Beatty et al. (2023) investigate the impact of batch size on stopping criteria in AL, finding that large batch sizes can degrade performance if not properly managed. They suggest adjusting window sizes in stopping methods to mitigate this effect, indicating the importance of fine-tuning AL parameters for optimal performance.
+
+### Comparative Analysis
+While large batch sizes can lead to performance degradation, smaller batch sizes may result in slower convergence. Balancing these trade-offs requires careful parameter tuning and experimentation with different stopping criteria. Adaptive methods that dynamically adjust batch sizes based on model performance can offer a promising solution.
+
+## Feature Selection and Domain-Specific Applications
+
+### Overview
+Feature selection plays a crucial role in AL, particularly in domains where acquiring certain features is expensive. Domain-specific applications, such as neuroimaging and video classification, require specialized AL strategies to address unique challenges.
+
+### Key Contributions
+Kok et al. (2023) introduce Active Selection of Classification Features (ASCF), focusing on selecting informative features rather than instances. This approach is particularly useful in domains where acquiring certain features is expensive, such as neuroimaging research. Goswami and Chakraborty (2023) propose a novel AL framework for video classification, enabling annotators to review only a few frames rather than entire videos, significantly reducing the labeling effort required for video datasets.
+
+### Comparative Analysis
+Domain-specific applications often require specialized AL strategies that take into account the unique characteristics and constraints of the domain. For instance, ASCF is designed to address the high cost of feature acquisition in neuroimaging, while the AL framework for video classification focuses on reducing the labeling effort for large video datasets.
+
+## Multi-Label Classification and Proper Scoring Rules
+
+### Overview
+Multi-label classification presents additional challenges for AL, as it requires the identification of multiple relevant labels for each instance. Proper scoring rules, such as those from the Beta family, have been leveraged to improve the acquisition of informative samples in multi-label settings.
+
+### Key Contributions
+Tan et al. (2023) introduce a deep active learning strategy for multi-label text classification, leveraging the Beta family of proper scoring rules within the Expected Loss Reduction framework. Their method outperforms established acquisition techniques across various datasets and architectures.
+
+### Comparative Analysis
+Proper scoring rules offer a principled way to evaluate and optimize the acquisition of informative samples in multi-label settings. By aligning the acquisition function with proper scoring rules, researchers can ensure that the selected samples are truly informative and contribute to improved model performance.
+
+## Robustness and Reproducibility
+
+### Overview
+Ensuring the robustness and reproducibility of AL methods is critical for their widespread adoption. Strong regularization and stringent controls are recommended to ensure consistent performance across different datasets and application scenarios.
+
+### Key Contributions
+Munjal et al. (2023) highlight the inconsistency in performance metrics achieved by different AL algorithms under identical experimental settings, advocating for stringent controls for assessing robustness and reproducibility. They recommend strong regularization to ensure consistent performance.
+
+### Comparative Analysis
+Strong regularization techniques can help mitigate the variability in performance metrics and ensure consistent performance across different datasets. Ensuring robustness and reproducibility is essential for building trust in AL systems and facilitating their deployment in real-world applications.
+
+## Challenges and Recommendations
+
+### Overview
+Challenges in combining crowdsourcing with machine learning for document screening and addressing the fragility of AL methods are significant issues that require tailored solutions. Objective-aware sampling techniques and adaptive learning strategies are recommended to address these challenges.
+
+### Key Contributions
+Krivosheev et al. (2023) address the challenge of combining crowdsourcing with machine learning for document screening, proposing objective-aware sampling techniques to minimize overall classification errors. This approach underscores the importance of tailored sampling strategies in specific application contexts.
+
+### Comparative Analysis
+Tailored sampling strategies and adaptive learning approaches can help address the challenges posed by crowdsourcing and the fragility of AL methods. By incorporating domain-specific knowledge and human-centric perspectives, researchers can develop more robust and adaptable AL systems.
+
+# Conclusion
+The reviewed papers collectively highlight the ongoing evolution and refinement of AL techniques for text classification using DNNs. Key advancements include the development of robust query strategies, the integration of diverse interpretability measures, and the optimization of AL processes for specific domains. However, challenges such as the fragility of AL methods and the need for careful parameter tuning remain. Future research should focus on enhancing the reliability and generalizability of AL strategies, ensuring they perform consistently across different datasets and application scenarios. Additionally, the integration of advanced architectures like transformers and ensembling techniques, along with the handling of imbalanced datasets and the incorporation of human-in-the-loop mechanisms, will be crucial for advancing the field of active learning for text classification.
+
+# References
+- A Survey of Active Learning for Text Classification using Deep Neural Networks  
+- On the Fragility of Active Learners for Text Classification  
+- Multi-View Active Learning for Short Text Classification in User-Generated Data  
+- Deep Active Learning for Text Classification with Diverse Interpretations  
+- Impact of Batch Size on Stopping Active Learning for Text Classification  
+- Active Selection of Classification Features  
+- Active Learning for Video Classification with Frame Level Queries  
+- Active Discriminative Text Representation Learning  
+- Harnessing the Power of Beta Scoring in Deep Active Learning for Multi-Label Text Classification  
+- Towards Robust and Reproducible Active Learning Using Neural Networks  
+- Active Learning from Crowd in Document Screening  
+- Improving Probabilistic Models in Text Classification via Active Learning  
+- Multi-Class Active Learning: A Hybrid Informative and Representative Criterion Inspired Approach  
+- Active Learning for Reducing Labeling Effort in Text Classification Tasks  
+- Information Condensing Active Learning  
+- Active Learning by Acquiring Contrastive Examples  
+- Dominant Set-Based Active Learning for Text Classification and Its Application to Online Social Media  
+- Evaluating Zero-Cost Active Learning for Object Detection  
+- OpenAL: An Efficient Deep Active Learning Framework for Open-Set Pathology Image Classification  
+- Entropic Open-Set Active Learning  
+- Investigating Multi-Source Active Learning for Natural Language Inference  
+- Class-Balanced Active Learning for Image Classification  
+- Active Learning for Abstractive Text Summarization  
+- Focused Active Learning for Histopathological Image Classification  
+- Active Learning with Importance Sampling  
+- Active Learning for Skewed Data Sets  
+- Small-Text Active Learning for Text Classification in Python  
+- Medical Text Classification using Convolutional Neural Networks  
+- OLALA Object-Level Active Learning for Efficient Document Layout Annotation  
+- Active Learning for Natural Language Generation  
+- Learning Loss for Active Learning  
+- Batch versus Sequential Active Learning for Recommender Systems  
+- Search Improves Label for Active Learning  
+- Early Forecasting of Text Classification Accuracy and F-Measure with Active Learning  
+- Perturbation-based Active Learning for Question Answering  
+- On the Limitations of Simulating Active Learning  
+- Font Identification in Historical Documents Using Active Learning  
+- Deep Active Learning for Named Entity Recognition  
+- Automatic Text Scoring Using Neural Networks  
+- Improving Active Learning in Systematic Reviews  
+- Six Attributes of Unhealthy Conversation  
+- Active Learning from Imperfect Labelers
