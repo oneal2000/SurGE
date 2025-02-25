@@ -53,33 +53,25 @@ A **survey** consists of the following fields:
 
 The corpus containing all literature articles is available in:  `data/corpus.json`
 
-**Example**：Here, we present how articles are organized in the knowledge base. Overly long abstracts have been appropriately shortened.
+**Example** : Here, we present how articles are organized in the knowledge base. Overly long abstract has been appropriately shortened.
 
->{
->
->​        "Title": "Information Geometry of Evolution of Neural Network Parameters While   Training",
->
->​        "Authors": [
->
->​            "Abhiram Anand Thiruthummal",
->
->​            "Eun-jin Kim",
->
->​            "Sergiy Shelyag"
->
->​        ],
->
->​        "Year": "2024",
->
->​        "Date": "2024-06-07T23:42:54Z",
->
->​        "Abstract": "Artificial neural networks (ANNs) are powerful tools capable of approximating any arbitrary mathematical function, but their interpretability remains limited...",
->
->​        "Category": "cs.LG",
->
->​        "doc_id": 1086990
->
->​    }
+```
+{
+        "Title": "Information Geometry of Evolution of Neural Network Parameters While   Training",
+        "Authors": [
+            "Abhiram Anand Thiruthummal",
+            "Eun-jin Kim",
+            "Sergiy Shelyag"
+        ],
+        "Year": "2024",
+        "Date": "2024-06-07T23:42:54Z",
+        "Abstract": "Artificial neural networks (ANNs) are powerful tools capable of approximating any arbitrary mathematical function, but their interpretability remains limited...",
+        "Category": "cs.LG",
+        "doc_id": 1086990
+    }
+```
+
+
 
 The following are explanations of each field:
 
@@ -99,71 +91,44 @@ The mapping containing all queries and their corresponding articles is available
 
 Every topic in topic-to-publication mappings is extracted from the **ground truth survey**. The corresponding articles are the references cited in that paragraph of the original text.
 
-Below is an example:
+Below is an example, Overly long content has been appropriately shortened.
 
->  {
->
->​        "original_id": "23870233-7f5b-4ef1-9d38-e6f3adb0fa48",
->
->​        "query_id": 486,
->
->​        "date": "2020-07-16T09:23:13Z",
->
->​        "year": "2020",
->
->​        "category": "cs.LG",
->
->​        "content": "}\n{\nMachine learning classifiers can perpetuate and amplify the existing systemic injustices in society . Hence, fairness is becoming another important topic. Traditionally, robust training and fair training have been studied by separate communities; robust training with noisy labels has mostly focused on combating label noise without regarding data bias , whereas fair training has focused on dealing with data bias, not necessarily noise . However, noisy labels and data bias, in fact, coexist in real-world data. Satisfying both robustness and fairness is more realistic but challenging because the bias in data is pertinent to label noise. \nIn general, many fairness criteria are group-based, where a target metric is equalized or enforced over subpopulations in the data, also known as \\emph{protected groups} such as race or gender . Accordingly, the goal of fair training is building a model that satisfies such fairness criteria for the \\emph{true} protected groups. However, if the \\emph {noisy} protection group is involved, such fairness criteria cannot be directly applied. Recently, mostly after 2020, a few pioneering studies have emerged to consider both robustness and fairness objectives at the same time under the binary classification setting . Therefore, more research attention is needed for the convergence of robust training and fair training.\n}\n\\vspace*{-0.12cm}",
->
->​        "prefix_titles": [
->
->​            [
->
->​                "title",
->
->​                "Learning from Noisy Labels with Deep Neural Networks: A Survey"
->
->​            ],
->
->​            [
->
->​                "section",
->
->​                "Future Research Directions"
->
->​            ],
->
->​            [
->
->​                "subsection",
->
->​                "{Robust and Fair Training"
->
->​            ]
->
->​        ],
->
->​        "prefix_titles_query": "What are the future research directions for robust and fair training in the context of learning from noisy labels with deep neural networks?",
->
->​        "cites": [
->
->​            7771,
->
->​            4163,
->
->​            3899,
->
->​            8740,
->
->​            8739
->
->​        ],
->
->​        "cite_extract_rate": 0.8333333333333334,
->
->​        "origin_cites_number": 6
->
->​    }
+```
+  {
+        "original_id": "23870233-7f5b-4ef1-9d38-e6f3adb0fa48",
+        "query_id": 486,
+        "date": "2020-07-16T09:23:13Z",
+        "year": "2020",
+        "category": "cs.LG",
+        "content": "}\n{\nMachine learning classifiers can perpetuate and amplify the existing systemic injustices in society . Hence, fairness is becoming another important topic. Traditionally...",
+        "prefix_titles": [
+            [
+                "title",
+                "Learning from Noisy Labels with Deep Neural Networks: A Survey"
+            ],
+            [
+                "section",
+                "Future Research Directions"
+            ],
+            [
+                "subsection",
+                "{Robust and Fair Training"
+            ]
+        ],
+        "prefix_titles_query": "What are the future research directions for robust and fair training in the context of learning from noisy labels with deep neural networks?",
+        "cites": [
+            7771,
+            4163,
+            3899,
+            8740,
+            8739
+        ],
+        "cite_extract_rate": 0.8333333333333334,
+        "origin_cites_number": 6
+    }
+```
+
+
 
 The following are explanations of each field:
 
