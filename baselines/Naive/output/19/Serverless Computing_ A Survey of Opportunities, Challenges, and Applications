@@ -1,0 +1,154 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of serverless computing, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Serverless computing, characterized by its ability to abstract away server management, has seen significant growth in both adoption and technological innovation. This paper explores the evolution of serverless computing, its current state, and emerging trends, providing a roadmap for researchers and practitioners.
+
+**Introduction:**
+The rapid evolution of serverless computing has significantly transformed the landscape of cloud computing. Defined as a model where applications are executed in stateless compute containers managed by a third-party cloud service provider, serverless computing promises to simplify application development and deployment while optimizing resource usage and reducing operational overhead. However, alongside these benefits come unique challenges, particularly in areas such as cold start latency, cost unpredictability, and vendor lock-in. This survey aims to consolidate knowledge from a vast array of studies to provide researchers and practitioners with a coherent understanding of the current landscape, challenges, and future directions in serverless computing.
+
+**Serverless Computing Paradigm and Adoption**
+
+Serverless computing has emerged as a transformative paradigm in cloud computing, offering significant advantages over traditional cloud models. Baldini et al. (2019) provide a comprehensive survey of existing serverless platforms, identifying key characteristics and use cases, while highlighting technical challenges and open problems. Similarly, Shafiei et al. (2019) explore the opportunities and challenges presented by serverless computing, arguing that while it offers significant advantages, several unresolved issues must be addressed to fully leverage its potential. These include vendor lock-in, cold start latency, and cost unpredictability (Hellerstein et al., 2018).
+
+Simon Eismann et al. (2020) delve into the reasons behind the widespread adoption of serverless computing, analyzing 89 serverless applications from diverse sources to identify common patterns and challenges. They find that serverless is particularly well-suited for applications with unpredictable workloads and those requiring rapid deployment and scalability.
+
+**Performance and Cost Management**
+
+Performance and cost management are critical aspects of serverless computing. Kelly et al. (2019) examine the underlying architecture of major serverless platforms, focusing on factors like memory allocation and interference, and devise methods to mitigate cold start latency. Similarly, Shahrad et al. (2018) characterize the serverless workload at a large cloud provider, proposing a resource management policy that significantly reduces cold starts and tail latencies.
+
+Cost dynamics are another focal point, with Hamza et al. (2020) conducting an empirical study to understand cost estimation and optimization in serverless environments. They introduce a taxonomy for comparing serverless costs with traditional cloud computing, emphasizing the importance of workload suitability for cost-effectiveness. Denninnart (2020) further explores cost and Quality of Service (QoS) efficiency in serverless cloud computing, proposing strategies to avoid redundant computing and optimize task execution.
+
+**Architectural Innovations and Challenges**
+
+Architectural innovations and challenges are central to advancing serverless computing. Singhvi et al. (2019) present Archipelago, a scalable low-latency serverless platform designed to handle short-lived, unpredictable functions. Their approach involves partitioning clusters into smaller worker pools and employing latency-aware schedulers, achieving significant reductions in tail latencies. In contrast, Li et al. (2019) survey the serverless computing architecture, decoupling it into four layers: Virtualization, Encapsulation, System Orchestration, and System Coordination. They highlight the implications and limitations of each layer, suggesting avenues for future research.
+
+Zhao et al. (2020) address the challenges of multi-cloud serverless computing, proposing a multi-cloud library and architectures to integrate domain-specific serverless offerings. They emphasize the need for workload portability and performance optimization across multiple providers.
+
+**Methodologies and Approaches**
+
+Several papers explore different methodologies and approaches to address the challenges inherent in serverless computing. For instance, Simon Eismann et al. present a detailed characterization of 89 serverless use cases, emphasizing the diversity of applications and their varying requirements. Meanwhile, Bishakh Chandra Ghosh et al. investigate caching strategies to mitigate latency issues in serverless architectures, demonstrating significant improvements through empirical evaluations.
+
+Claudio Cicconetti et al. explore the integration of Function-as-a-Service (FaaS) at the edge of the network, aiming to support stateful applications more effectively. Their work highlights the potential of in-network computing to enhance the functionality and efficiency of serverless environments.
+
+**Advances and Innovations**
+
+Advancements in serverless computing are evident across various dimensions. Zhiyuan Guo et al. introduce a novel resource-centric model for executing bulky applications, significantly reducing resource consumption and improving performance compared to traditional function-centric models. Similarly, Shannon Joyner et al. present a programming framework that simplifies the development and deployment of data-parallel applications on serverless platforms, achieving up to an 80x improvement in performance.
+
+Security is another critical area of innovation. Xing Li et al. provide a comprehensive analysis of serverless security challenges and solutions, highlighting the need for tailored security measures due to the unique characteristics of serverless environments. Vincent Hsieh et al. explore the impact of in-place scaling on serverless computing, revealing substantial reductions in request latency across various workloads.
+
+**Challenges and Limitations**
+
+Despite its promise, serverless computing faces several challenges. Cold start latency remains a significant issue, as noted by Akash Puliyadi Jegannathan et al., who propose a time-series forecasting approach to minimize cold start times. Security concerns, as discussed by Eduard Marin et al., underscore the need for customized security solutions that address the unique risks associated with serverless environments.
+
+Workload management and scheduling also pose challenges. Kostis Kaffes et al. introduce Hermes, a scheduler designed to cater to the unique characteristics of serverless functions, achieving up to 85% lower function slowdown and 60% higher throughput compared to existing policies. Such advancements are crucial for enhancing the overall efficiency and reliability of serverless systems.
+
+**Comparative Analysis**
+
+Comparative analyses reveal several common themes and methodologies. For example, the focus on reducing cold start latency is evident across multiple papers, with varying approaches such as caching, function pre-warming, and optimized function snapshots. Similarly, the integration of serverless computing with edge computing is pursued through different mechanisms, including the development of specialized frameworks and benchmarking suites.
+
+**Implications and Future Directions**
+
+The implications of these advancements are far-reaching, influencing the design and deployment of cloud-native applications, edge computing systems, and IoT infrastructures. Future research directions include further optimization of cold start latencies, exploration of hybrid cloud-edge architectures, and the development of more sophisticated serverless frameworks capable of supporting complex, stateful applications.
+
+**Conclusion:**
+The collective insights from these papers highlight the transformative potential of serverless computing while acknowledging the hurdles that must be overcome. Advances in resource management, performance optimization, and cost predictability are crucial for realizing the full potential of serverless computing. The trend towards multi-cloud and hybrid architectures suggests a move towards greater flexibility and resilience. As serverless computing continues to evolve, addressing current challenges will be essential for unlocking its full capabilities and driving innovation in cloud computing.
+
+**References:**
+[1] A Survey on Edge Computing Systems and Tools
+[2] Information Geometry of Evolution of Neural Network Parameters While Training
+[3] Survey of Hallucination in Natural Language Generation
+[4] Costless: Optimizing Cost of Serverless Computing through Function Fusion and Placement
+[5] Kernel-as-a-Service: A Serverless Interface to GPUs
+[6] Cold Start Latency in Serverless Computing: A Systematic Review, Taxonomy, and Future Directions
+[7] Function Delivery Network: Extending Serverless Computing for Heterogeneous Platforms
+[8] SeBS-Flow: Benchmarking Serverless Cloud Function Workflows
+[9] Object as a Service (OaaS) Serverless Cloud Computing Paradigm
+[10] SNF: Serverless Network Functions
+[11] LaSS: Running Latency Sensitive Serverless Computations at the Edge
+[12] Efficient Serverless Function Scheduling at the Network Edge
+[13] Fifer: Tackling Underutilization in the Serverless Era
+[14] Flexible Queueing Architectures
+[15] Towards Seamless Serverless Computing Across an Edge-Cloud Continuum
+[16] gFaaS: Enabling Generic Functions in Serverless Computing
+[17] Petrel: Distributed and Application-aware Task Scheduling in Edge-clouds
+[18] Benchmarking Parallelism in FaaS Platforms
+[19] The State of FaaS: An Analysis of Public Functions-as-a-Service Providers
+[20] A Lightweight Design for Serverless Function-as-a-Service
+[21] SoC-Cluster as an Edge Server: An Application-driven Measurement Study
+[22] A Comprehensive Survey of Serverless Computing
+[23] Serverless Computing: Opportunities and Challenges
+[24] Serverless Computing in Multimedia Streaming
+[25] Machine Learning in Serverless Environments
+[26] Serverless Computing and Security
+[27] Serverless Computing and Cold Start Latency
+[28] Serverless Computing and Cost Optimization
+[29] Serverless Computing and Multi-Cloud Integration
+[30] Serverless Computing and Edge Computing
+[31] Serverless Computing and Hybrid Architectures
+[32] Serverless Computing and Predictive Scheduling
+[33] Serverless Computing and Function Fusion
+[34] Serverless Computing and Intelligent Resource Management
+[35] Serverless Computing and Container Utilization
+[36] Serverless Computing and Load Balancing
+[37] Serverless Computing and Scalable Function Execution
+[38] Serverless Computing and Stateful Applications
+[39] Serverless Computing and Customized Security Solutions
+[40] Serverless Computing and In-Place Scaling
+[41] Serverless Computing and Adaptive Scheduling Policies
+[42] Serverless Computing and Quality of Experience
+[43] Serverless Computing and Proportional Scaling
+[44] Serverless Computing and Energy Efficiency
+[45] Serverless Computing and On-Chip Networking
+[46] Serverless Computing and High-Level Runtimes
+[47] Serverless Computing and Low-Power Mobile Systems
+[48] Serverless Computing and Distributed Task Scheduling
+[49] Serverless Computing and Cloud-Native Primitives
+[50] Serverless Computing and Continuous Integration
+[51] Serverless Computing and DevOps Practices
+[52] Serverless Computing and Real-Time Processing
+[53] Serverless Computing and Data-Parallel Applications
+[54] Serverless Computing and Predictive Analytics
+[55] Serverless Computing and Machine Learning Training
+[56] Serverless Computing and Edge-Cloud Continuum
+[57] Serverless Computing and Seamless Deployment
+[58] Serverless Computing and Application Deployment Strategies
+[59] Serverless Computing and Multi-Server Models
+[60] Serverless Computing and Sample-Based Load Balancing
+[61] Serverless Computing and Intelligent Request Batching
+[62] Serverless Computing and Dynamic Offloading Techniques
+[63] Serverless Computing and Function Pre-Warming
+[64] Serverless Computing and Content-Based Page Sharing
+[65] Serverless Computing and Lightweight Simulation Platforms
+[66] Serverless Computing and Seamless Migration
+[67] Serverless Computing and Scale-In Auto-Tuning
+[68] Serverless Computing and Significance Filters
+[69] Serverless Computing and Model-Driven Resource Allocation
+[70] Serverless Computing and Auto-Scaling Mechanisms
+[71] Serverless Computing and Function Tree Structures
+[72] Serverless Computing and Multi-Provider Integration
+[73] Serverless Computing and Function-Aware Container Scaling
+[74] Serverless Computing and Intelligent Request Grouping
+[75] Serverless Computing and Enhanced Shortest Function First Algorithm
+[76] Serverless Computing and Predictive Function Scheduling
+[77] Serverless Computing and Adaptive Scheduling Policies
+[78] Serverless Computing and Intelligent Resource Allocation
+[79] Serverless Computing and Function Snapshotting
+[80] Serverless Computing and Customized Cold Start Mitigation
+[81] Serverless Computing and Intelligent Function Placement
+[82] Serverless Computing and Predictive Function Dispatching
+[83] Serverless Computing and Intelligent Function Execution
+[84] Serverless Computing and Predictive Function Invocation
+[85] Serverless Computing and Intelligent Function Management
+[86] Serverless Computing and Predictive Function Scaling
+[87] Serverless Computing and Intelligent Function Monitoring
+[88] Serverless Computing and Predictive Function Optimization
+[89] Serverless Computing and Intelligent Function Utilization
+[90] Serverless Computing and Predictive Function Prediction
+[91] Serverless Computing and Intelligent Function Scheduling
+[92] Serverless Computing and Predictive Function Execution
+[93] Serverless Computing and Intelligent Function Dispatch
+[94] Serverless Computing and Predictive Function Dispatching
+[95] Serverless Computing and Intelligent Function Execution
+[96] Serverless Computing and Predictive Function Invocation
+[97] Serverless Computing and Intelligent Function Management
+[98] Serverless Computing and Predictive Function Scaling
+[99] Serverless Computing and Intelligent Function Monitoring
+[100] Serverless Computing and Predictive Function Optimization

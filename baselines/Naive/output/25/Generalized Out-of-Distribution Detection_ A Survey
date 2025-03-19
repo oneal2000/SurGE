@@ -1,0 +1,64 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of generalized out-of-distribution (OOD) detection, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It underscores the importance of robust OOD detection for ensuring the reliability and safety of machine learning models in real-world applications, especially in critical domains such as autonomous driving and medical diagnostics.
+
+**Introduction:**
+The rapid evolution of machine learning has led to a growing demand for models that can operate reliably in dynamic and uncertain environments. However, traditional models often struggle with out-of-distribution (OOD) data, leading to significant performance degradation and potential safety risks. Out-of-distribution detection aims to identify and manage data that falls outside the expected distribution, ensuring that machine learning models remain robust and trustworthy. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape of OOD detection. We discuss the evolution of methodologies, key challenges, and future directions in this field.
+
+**Unifying Frameworks and Definitions**
+A foundational aspect of OOD detection research is the establishment of a unified framework that encompasses related problems such as anomaly detection (AD), novelty detection (ND), open set recognition (OSR), and outlier detection (OD). Jingkang Yang et al. (2022) propose a generalized OOD detection framework that consolidates these problems into a cohesive structure. They argue that these issues can be seen as special cases or sub-tasks within the broader context of OOD detection, making it easier to distinguish and analyze them collectively. Similarly, Zhen Fang et al. (2022) delve into the theoretical underpinnings of OOD detection, exploring the learnability of such methods and identifying necessary and sufficient conditions for effective OOD detection.
+
+**Methodological Approaches**
+The methodologies used in OOD detection can be broadly categorized into feature-based, model-agnostic, and unsupervised techniques. Feature-based approaches, such as SEM (Jingkang Yang et al., 2022), focus on distinguishing between semantic and non-semantic information to effectively handle full-spectrum OOD (FS-OOD) detection. These methods leverage specific features of the data to improve detection accuracy. Model-agnostic approaches, such as Diversified Outlier Exposure (DivOE) (Jianing Zhu et al., 2022), synthesize informative outliers during training to enhance OOD detection. This method leverages multi-step optimization to generate novel outliers beyond the original auxiliary set, providing a robust solution for OOD detection. Unsupervised techniques, such as Virtual Outlier Synthesis (VOS) (Du et al., 2021), introduce a framework for synthesizing virtual outliers during training to regularize the model's decision boundary. This method adapts to unknown data by shaping the uncertainty space between in-distribution (ID) and synthesized outlier data, achieving competitive performance on both object detection and image classification tasks.
+
+**Evaluative Benchmarks and Metrics**
+The development of comprehensive and realistic evaluation frameworks is crucial for assessing the performance of OOD detection methods. Vahid Reza Khazaie et al. (2022) propose a novel evaluation framework that includes new OOD test datasets (CIFAR-10-R, CIFAR-100-R, and ImageNet-30-R) to better simulate real-world distribution shifts. They also introduce the Generalizability Score (GS) to measure the generalization ability of models during OOD detection, highlighting the limitations of existing benchmark datasets. Similarly, Jingkang Yang et al. (2022) introduce OpenOOD, a unified codebase that implements over 30 methods for OOD detection, providing a comprehensive benchmark under the generalized OOD detection framework. These advancements in evaluation frameworks enable researchers to compare and validate different OOD detection methods more effectively.
+
+**Applications and Practical Considerations**
+Practical applications of OOD detection extend to various domains, including medical imaging and autonomous driving. Antoine Sanner et al. (2022) evaluate OOD generalization methods for medical image segmentation, finding that no single method performs reliably across all scenarios. They emphasize the importance of tuning and selecting appropriate methods based on the specific application and data characteristics. Additionally, Dan Hendrycks et al. (2022) scale up OOD detection for real-world settings, introducing new benchmarks for large-scale multiclass and multi-label settings with high-resolution images and thousands of classes. Their findings indicate that a simple detector based on the maximum logit outperforms prior methods in various large-scale tasks.
+
+**Limitations and Future Directions**
+Despite the progress made, several limitations remain. Zhen Fang et al. (2022) explore the learnability of OOD detection and find that under certain scenarios, it is impossible to achieve perfect OOD detection. However, they identify practical scenarios where OOD detection is feasible and provide theoretical support for existing methods. Furthermore, Lily H. Zhang et al. (2022) explain the failure modes of deep generative models in OOD detection, attributing these failures to model misestimation rather than inherent limitations of likelihood-based approaches. These insights point towards the need for further research into robust and reliable OOD detection methods. Future work should focus on refining theoretical foundations, improving practical applicability, and addressing the limitations highlighted in existing studies.
+
+**Conclusion**
+The reviewed papers collectively highlight the ongoing evolution of OOD detection methodologies and the importance of developing comprehensive evaluation frameworks. Innovations such as SEM, DivOE, and OpenOOD represent significant advancements in handling semantic and covariate shifts, while new benchmarks and metrics provide a more realistic assessment of model performance. However, challenges persist, underscoring the need for continued research into robust and generalizable OOD detection methods. Future work should focus on refining theoretical foundations, improving practical applicability, and addressing the limitations highlighted in existing studies.
+
+**References:**
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] Understanding and Improving Feature Learning for Out-of-Distribution Generalization  
+[5] Segmentation Consistency Training Out-of-Distribution Generalization for Medical Image Segmentation  
+[6] Model Agnostic Sample Reweighting for Out-of-Distribution Learning  
+[7] Unsupervised Out-of-Distribution Detection with Batch Normalization  
+[8] Is it all a cluster game -- Exploring Out-of-Distribution Detection based on Clustering in the Embedding Space  
+[9] Virtual Outlier Synthesis  
+[10] Out-of-Distribution Generalization Analysis via Influence Function  
+[11] On the Impact of Spurious Correlation for Out-of-distribution Detection  
+[12] Contextualised Out-of-Distribution Detection using Pattern Identification  
+[13] Generalized Out-of-Distribution Detection and Beyond in Vision Language Model Era: A Survey  
+[14] Training OOD Detectors in their Natural Habitats  
+[15] POEM: Out-of-Distribution Detection with Posterior Sampling  
+[16] Out-of-Distribution Detection with Deep Nearest Neighbors  
+[17] Generalized ODIN: Detecting Out-of-distribution Image without Learning from Out-of-distribution Data  
+[18] Out-of-Distribution Generalization via Risk Extrapolation (REx)  
+[19] EiHi Net: Out-of-Distribution Generalization Paradigm  
+[20] Towards a Theoretical Framework of Out-of-Distribution Generalization  
+[21] Exploring Simple, High Quality Out-of-Distribution Detection with L2 Normalization  
+[22] Margin-Bounded Confidence Scores for Out-of-Distribution Detection  
+[23] Uncertainty Modeling for Out-of-Distribution Generalization  
+[24] SOOD-ImageNet  
+[25] Conformal Prediction  
+[26] Low-Dimensional Gradient  
+[27] ViM: Virtual Logit Matching for Out-of-Distribution Detection  
+[28] FOOD: Fine-Tuned One-Class Classification for Out-of-Distribution Detection  
+[29] Boosting for Out-of-Distribution Detection  
+[30] Igeood: Information Geometry for Out-of-Distribution Detection  
+[31] PALM: Prototype-Aware Learning for Out-of-Distribution Detection  
+[32] PT-OOD: Pre-Trained Out-of-Distribution Detection  
+[33] ETLT: Enhanced Threshold Learning for Out-of-Distribution Detection  
+[34] Entropic Detection  
+[35] ImageNet-OOD  
+[36] OD-test  
+[37] A Survey on Edge Computing Systems and Tools  
+[38] Information Geometry of Evolution of Neural Network Parameters While Training  
+[39] Survey of Hallucination in Natural Language Generation

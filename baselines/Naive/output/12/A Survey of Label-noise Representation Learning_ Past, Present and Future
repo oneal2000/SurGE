@@ -1,0 +1,94 @@
+# A Survey of Label-noise Representation Learning: Past, Present and Future
+
+## Abstract
+This survey paper provides a comprehensive overview of label-noise representation learning (LNRL), synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It emphasizes the importance of robust training schemes and innovative paradigms in handling label noise, and discusses how these methods enhance the reliability and generalization capabilities of deep learning models in real-world applications.
+
+## Introduction
+The prevalence of label noise in large-scale datasets poses a significant challenge to the performance and reliability of deep learning models. Label noise, arising from human errors, data collection issues, or inherent variability in data, can severely degrade the model's ability to generalize to unseen data. Traditional machine learning algorithms assume clean labels, a premise often violated in real-world scenarios. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape in LNRL. We cover the evolution of methodologies, common themes, and emerging trends, while identifying key challenges and future research directions.
+
+## Methodologies and Approaches
+
+### Noise Modeling and Analysis
+Noise modeling involves understanding and quantifying the nature of label noise. Several studies have focused on profiling and analyzing label noise, recognizing that noise can be class-conditional, instance-dependent, or correlated with input features. For instance, De Cheng et al. introduced a manifold-regularized approach to estimate the noise transition matrix, while Xiaobo Xia et al. modified the transition matrix with a slack variable. Zhuolin Jiang et al.'s Noise Modeling Network (NMN) integrates with Convolutional Neural Networks (CNNs) to learn noise distributions and model parameters. Dawson and Polikar extended noise modeling to include labeler-dependent noise. 
+
+### Robust Training Algorithms
+Robust training algorithms aim to mitigate the effects of label noise during training. These algorithms often involve modifying loss functions or incorporating data cleaning techniques. For example, CleanNet by Kun Yi et al. transfers label noise knowledge across classes, reducing the need for extensive human supervision. Hui Kang et al.’s Contrastive Weighted Consistent Learning (CWCL) contrasts features across channels to distinguish authentic labels from noise. PENCIL by Kun Yi et al. updates network parameters and label estimates simultaneously, enhancing robustness. Ahmet Iscen et al. enhance robustness via neighbor consistency in feature space, while Jihye Kim et al.’s CrossSplit trains two networks on disjoint data to mitigate noisy label memorization.
+
+### Advanced Regularization Techniques
+Advanced regularization techniques are designed to prevent overfitting to noisy labels. For instance, Galatolo et al. proposed early-learning regularization to avoid memorizing noisy labels, and Wu et al. introduced a topological filter that uses high-order topological information to collect clean data. Yikai Zhang et al. proposed a progressive label correction algorithm with theoretical guarantees. These techniques ensure that the model learns from clean data while avoiding over-reliance on noisy labels.
+
+### Contrastive Learning and Representation Alignment
+Contrastive learning has emerged as a powerful tool for handling label noise. Studies like those by Han et al. and Huang et al. leverage contrastive learning to align representations across different views or modalities, facilitating the identification of noisy labels. Contrastive regularization functions help in learning robust representations that discard information related to corrupted labels. The use of anchor points and semi-supervised contrastive learning frameworks, such as Manifold DivideMix, further enhances robustness by extracting meaningful embeddings.
+
+### Integration of External Knowledge
+Some approaches incorporate external knowledge about the noise sources to enhance the robustness of learning algorithms. For example, CleanNet leverages knowledge about likely noise sources to improve performance. MetaLabelNet by Ghiassi et al. generates soft-labels from noisy-labels based on a meta-objective, using a small amount of clean data. These methods leverage prior knowledge to guide the learning process and improve the model's robustness.
+
+## Comparative Analysis
+
+### Direct Loss Function Adjustments
+Direct loss function adjustments involve modifying loss functions to enhance robustness against label noise. Toner and Storkey proposed imposing a lower bound on the empirical risk during training to mitigate overfitting caused by label noise. Zheng et al. provided a theoretical explanation for why noisy classifiers can serve as good indicators of clean labels, proposing a novel algorithm that corrects labels based on noisy classifier predictions.
+
+### Noise-Aware Training Techniques
+Noise-aware training techniques leverage ensemble learning or semi-supervised learning principles to handle label noise. Lee and Chung’s Learning with Ensemble Consensus (LEC) removes noisy examples based on the consensus of an ensemble of perturbed networks. Lin and Bradic’s MARVEL tracks classification margins over epochs to curb memorization of noisy instances. Nguyen et al.’s SELF dynamically filters out wrong labels during training by leveraging ensemble estimates of predictions, demonstrating substantial improvements across various image classification tasks.
+
+### Novel Paradigms for Handling Label Noise
+Novel paradigms such as EchoAlign treat noisy labels as accurate and modify instance features accordingly. This approach leverages controllable generative models and robust sample selection techniques, achieving remarkable performance improvements in environments with high instance-dependent noise. Zhang et al.’s robust LNL method perturbs labels in an adversarial manner at each epoch, making the loss values of clean and noisy labels distinguishable.
+
+## Common Themes and Trends
+
+### Sample Selection and Filtering
+Many studies emphasize the importance of distinguishing between clean and noisy samples. Techniques such as small-loss filtering, multi-view prediction, and self-ensemble generation are employed to identify and exclude noisy samples from training. These methods balance the inclusion of potentially clean large-loss examples with the exclusion of noisy ones, enhancing the model's generalization capabilities.
+
+### Label Correction and Relabeling
+Label correction and relabeling methods focus on improving the quality of the training data by correcting noisy labels. Pseudo-label correction, teacher-student frameworks, and iterative relabeling are utilized to enhance the reliability of the training data. These methods dynamically adjust the importance weights between real observed and generated labels, enabling robust model bootstrapping.
+
+### Contrastive Learning and Representation Alignment
+Contrastive learning aligns representations across different views or modalities, facilitating the identification of noisy labels. Techniques like mixup and contrastive learning help in learning robust representations that discard information related to corrupted labels. Semi-supervised contrastive learning frameworks extract meaningful embeddings by leveraging anchor points and semi-supervised learning principles.
+
+### Decoupling Memorization Processes
+Decoupling memorization processes aims to separate the learning of clean data from mislabeled data. Methods like network parameter decomposition and adjustment of training dynamics help in isolating clean data from noisy samples. This ensures that the model focuses on learning from clean data while avoiding overfitting to noisy labels.
+
+## Implications and Future Directions
+
+### Generalizing Across Domains
+Developing methods that can handle label noise in diverse domains, such as healthcare and autonomous driving, is crucial. Future research should focus on creating domain-specific noise models and robust training frameworks that can adapt to varying noise conditions.
+
+### Scalability
+Ensuring that noise mitigation techniques remain effective and efficient as dataset sizes continue to grow is essential. Research should explore scalable methods that can handle large-scale datasets without compromising performance.
+
+### Interdisciplinary Collaboration
+Leveraging insights from statistics, psychology, and social sciences to better understand and model label noise can lead to more comprehensive solutions. Interdisciplinary collaboration can provide a deeper understanding of noise mechanisms and improve the robustness of learning algorithms.
+
+### Addressing Long-Tailed Distributions
+Handling intrinsically long-tailed data and integrating open-set noise into existing frameworks is a significant challenge. Future research should focus on developing methods that can handle long-tailed distributions and open-set noise, ensuring robustness under varying noise levels and types.
+
+## Conclusion
+This survey has provided a comprehensive overview of recent advancements in LNRL, highlighting key contributions, methodologies, and implications. The surveyed papers collectively demonstrate the evolving landscape of this field, with a focus on developing robust and efficient methods to handle label noise. Future research should continue to push the boundaries of these methodologies, addressing the challenges posed by increasingly complex and diverse datasets. By synthesizing these advancements, researchers and practitioners can better navigate the complexities of real-world datasets and develop more robust and reliable machine learning models.
+
+## References
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] Masking: A New Perspective of Noisy Supervision  
+[5] Learning Deep Networks from Noisy Labels with Dropout Regularization  
+[6] Robust Temporal Ensembling for Learning with Noisy Labels  
+[7] Unsupervised Label Noise Modeling and Loss Correction  
+[8] Deep Self-Learning From Noisy Labels  
+[9] Robust Learning Under Label Noise With Iterative Noise-Filtering  
+[10] Co-matching: Combating Noisy Labels by Augmentation Anchoring  
+[11] TrustNet: Learning from Trusted Data Against (A)symmetric Label Noise  
+[12] Deep Learning is Robust to Massive Label Noise  
+[13] Confidence Scores Make Instance-dependent Label-noise Learning Possible  
+[14] Combating Label Noise in Deep Learning Using Abstention  
+[15] Learning with Ensemble Consensus (LEC)  
+[16] MARgins Via Early Learning (MARVEL)  
+[17] Self-ensemble Label Filtering (SELF)  
+[18] Robust Label-noise Learning (BadLabel)  
+[19] EchoAlign: Transformative Paradigm for Handling Label Noise  
+[20] Temporal Self-Ensemble Generation for Learning with Noisy Labels  
+[21] Regularly Truncated M-Estimators for Learning with Noisy Labels  
+[22] Twin Contrastive Learning with Noisy Labels  
+[23] Learning to Bootstrap Robust Models for Combating Label Noise  
+[24] Tackling Noisy Labels with Network Parameter Additive Decomposition  
+[25] The Dynamic of Consensus in Deep Networks and the Identification of Noisy Labels  
+[26] Feature and Label Recovery (FLR)

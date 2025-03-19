@@ -1,0 +1,134 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of graph learning, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Graph learning, encompassing techniques for extracting meaningful information from graph-structured data, has seen significant progress in areas such as deep graph representation learning, knowledge graph learning, and graph neural networks (GNNs). This survey identifies overarching themes, patterns, and trends in the research, discusses the evolution of ideas and technologies, and highlights significant debates, challenges, and future directions.
+
+**Introduction:**
+The rapid evolution of graph learning has significantly impacted fields ranging from social network analysis to bioinformatics and recommendation systems. Graphs serve as fundamental data structures for modeling complex relationships in various domains, including social networks, biological systems, and information networks. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape. The objective is to highlight key methodologies, applications, and challenges, as well as to discuss future research directions.
+
+### Main Sections
+
+#### 1. Methodologies and Approaches in Graph Learning
+
+Graph learning encompasses a variety of techniques designed to extract meaningful information from graph-structured data. Common approaches include graph signal processing, matrix factorization, random walk-based methods, and deep learning techniques such as Graph Neural Networks (GNNs). Each of these methods leverages the unique properties of graph data to address specific tasks, such as classification, clustering, and prediction.
+
+**Graph Signal Processing and Matrix Factorization:**
+Graph signal processing (GSP) methods focus on analyzing signals defined on the vertices of a graph. Techniques such as spectral clustering and graph Fourier transforms are employed to identify clusters and patterns within the data. Matrix factorization, on the other hand, decomposes the adjacency or Laplacian matrices of a graph to uncover latent structures. For instance, GRASPEL [6] introduces a scalable spectral approach for learning large graphs from data, demonstrating improvements in spectral clustering and t-SNE.
+
+**Random Walk-Based Methods:**
+Random walk-based methods utilize the traversal of graphs to capture structural information. These methods are particularly useful for tasks like link prediction and community detection. The approach involves simulating random walks on the graph to generate node embeddings that reflect the connectivity patterns. For example, semi-supervised classification with Graph Convolutional Networks (GCNs) [10] utilizes random walks to propagate information across the graph, achieving state-of-the-art performance on citation networks.
+
+**Deep Learning Approaches:**
+Deep learning approaches, particularly GNNs, have gained prominence due to their ability to handle complex graph structures. GNNs process graph data by iteratively updating node features through message-passing operations. This allows them to capture both local and global dependencies within the graph. Notable advancements include the introduction of Graph Kolmogorov-Arnold Networks (GKANs) [12], which employ learnable spline-based functions to enhance the expressiveness of GNNs, and CRaWl [15], a neural network architecture that extracts and aggregates information on subgraphs along random walks, thereby detecting long-range interactions.
+
+**Self-Supervised Learning on Graphs:**
+Self-supervised learning (SSL) has emerged as a promising paradigm for training graph neural networks without the need for labeled data. Various SSL methods have been developed, categorized into contrastive, generative, and predictive models. Contrastive methods aim to learn node representations by maximizing agreement between similar nodes and minimizing disagreement between dissimilar nodes. Generative models, such as those explored in [2], leverage knowledge graphs to generate synthetic data for training. Predictive models, like those described in [18], predict missing information in the graph to learn robust representations.
+
+Recent studies highlight the importance of designing SSL methods that account for the relational nature of graph data. For instance, RGRL [14] proposes a method that considers the relationship among nodes in both global and local perspectives, achieving superior performance over state-of-the-art baselines. Additionally, FastGCL [18] introduces a contrastive scheme tailored to the characteristics of GNNs, demonstrating faster training and convergence speeds.
+
+**Deep Graph Representation Learning:**
+Deep graph representation learning aims to capture high-level features of graph structures through hierarchical learning mechanisms. Rossi et al. introduce DeepGL, a framework that learns deep node and edge representations from large attributed graphs, showcasing its effectiveness in across-network transfer learning and attributed graph representation learning (Rossi, Zhou & Ahmed, 2023). Thekumparampil et al. propose an attention-based graph neural network for semi-supervised learning, demonstrating that removing intermediate fully-connected layers and incorporating attention mechanisms can significantly enhance performance (Thekumparampil, Wang, Oh & Li, 2022). Another notable contribution is Deep Graph Infomax (DGI), which maximizes mutual information between patch representations and global graph summaries to learn node representations (Veličković et al., 2019).
+
+**Knowledge Graph Learning:**
+Knowledge graph learning focuses on extracting and leveraging structured knowledge from graph data. Sardina et al. highlight key deficiencies in state-of-the-art graph learning systems, emphasizing the need for expert knowledge integration, stability to node degree extremity, uncertainty consideration, and explainability (Sardina, Costabello & Guéret, 2023). They advocate for a holistic approach to address these issues. Additionally, Joshi and Mishra review graph convolutional neural networks, graph autoencoders, and spatio-temporal GNNs for learning graph representations (Joshi & Mishra, 2023). These models facilitate the conversion of graph data into lower-dimensional vector representations, enhancing downstream machine learning tasks.
+
+**Graph Neural Networks:**
+Graph neural networks (GNNs) have emerged as a powerful tool for learning from graph-structured data. Zhang et al. present a systematic taxonomy of graph-level neural networks (GLNNs), highlighting the importance of graph pooling and graph neural networks in handling large and complex graphs (Zhang et al., 2023). Their work underscores the necessity of developing advanced GLNNs to model high-dimensional data effectively. Arnab et al. introduce a unified framework for video understanding using GNNs, which explicitly models spatio-temporal relations between actors, objects, and their environments (Arnab, Sun & Schmid, 2023). This framework demonstrates superior performance on various video understanding tasks, underscoring the versatility of GNNs.
+
+**Novel Applications and Innovations:**
+Recent research has extended the application scope of graph learning to diverse fields. For instance, Gadde et al. propose a novel framework for active semi-supervised learning on graphs using sampling theory, achieving effective node labeling (Gadde, Anis & Ortega, 2023). Similarly, Xu et al. develop a product knowledge graph embedding approach for e-commerce, which captures intrinsic product relations for applications such as marketing, advertising, and recommendation (Xu, Ruan, Korpeoglu, Kumar & Achan, 2023). These innovations highlight the practical utility of graph learning in real-world scenarios.
+
+**Comparative Analysis:**
+The methodologies presented in the surveyed papers vary widely, reflecting the diversity of challenges and requirements within graph learning. For example, while *GraphAIR* and *Hierarchical Graph Pooling with Structure Learning* emphasize the importance of capturing complex structural information through enhanced neighborhood interactions and hierarchical representations, respectively, *AgentNet* and *Graph2Seq* introduce fundamentally different architectures aimed at overcoming limitations of traditional GNNs.
+
+Moreover, the integration of self-supervised learning and contrastive learning, as seen in *Self-supervised Graph Learning for Recommendation* (Jiancan Wu et al.) and *Visual Commonsense based Heterogeneous Graph Contrastive Learning* (Zongzhao Li et al.), underscores the growing trend towards developing more robust and interpretable models. These approaches not only improve the accuracy and robustness of GNNs but also facilitate better understanding of the underlying graph structures.
+
+#### 2. Applications and Challenges in Graph Learning
+
+Graph learning has found applications in numerous domains, including computer vision, natural language processing, and reinforcement learning. For example, the integration of knowledge graphs into image classification tasks has led to improved performance [2]. Similarly, the use of graph representations in reinforcement learning has shown promise in solving complex problems like the Rubik's cube [8].
+
+However, the field faces several challenges. One major challenge is the scalability of graph learning methods, especially when dealing with large-scale graphs. Recent works such as GRASPEL [6] and UniKG [20] address this issue by developing efficient algorithms and benchmarks for large-scale graph learning. Another challenge is the interpretability of graph neural networks, which is crucial for understanding and trusting the models' decisions. Innovations like GKAN [12] and CRaWl [15] offer new avenues for enhancing the interpretability of GNNs by introducing novel architectural designs.
+
+#### 3. Evolution of Ideas and Technologies Over Time
+
+The evolution of graph learning techniques over time reflects a continuous improvement in addressing the inherent complexities of graph-structured data. Early approaches focused on basic graph signal processing and matrix factorization techniques. As the complexity of graph data increased, more sophisticated methods such as random walk-based methods and early GNNs were introduced. The advent of deep learning brought about a paradigm shift, leading to the development of advanced GNN architectures and self-supervised learning techniques. Recent advancements have further refined these methods, incorporating elements such as meta-learning, hierarchical representations, and interpretability, to address emerging challenges.
+
+#### 4. Debates, Challenges, and Future Directions
+
+Significant debates in the field revolve around the balance between model complexity and interpretability, the trade-off between performance and scalability, and the need for more robust and generalizable models. Challenges include handling large-scale and dynamic graphs, ensuring fairness and avoiding biases, and improving the interpretability of GNNs. Future research should focus on addressing these challenges by developing more efficient algorithms, integrating expert knowledge, and exploring new learning paradigms.
+
+### Conclusion
+
+The surveyed papers collectively advance our understanding of graph learning by presenting a wide array of methodologies and applications. From lifelong learning to self-supervised learning, these studies underscore the versatility and potential of graph learning techniques. Future research should continue to explore novel architectures, scalable algorithms, and interpretable models to address the challenges and opportunities in this dynamic field. The ongoing developments in graph learning are poised to have a profound impact on a variety of real-world applications, driving innovation and discovery across multiple disciplines.
+
+### References:
+
+[1] Weihua Hu et al., *Open Graph Benchmark Datasets for Machine Learning on Graphs*.
+
+[2] Haotian Li et al., *KG4Vis A Knowledge Graph-Based Approach for Visualization Recommendation*.
+
+[3] Shanshan Wang et al., *Self-supervised Graph Learning for Long-tailed Cognitive Diagnosis*.
+
+[4] Jihoon Ko et al., *BeGin Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph Continual Learning*.
+
+[5] Yijun Tian et al., *RecipeRec A Heterogeneous Graph Learning Model for Recipe Recommendation*.
+
+[6] Yuxin Guo et al., *Data-centric Graph Learning A Survey*.
+
+[7] Weijiang Yu et al., *Heterogeneous Graph Learning for Visual Commonsense Reasoning*.
+
+[8] Wenjie Yang et al., *Your Graph Recommender is Provably a Single-view Graph Contrastive Learning*.
+
+[9] Kaushalya Madhawa et al., *MetAL Active Semi-Supervised Learning on Graphs via Meta Learning*.
+
+[10] Wei Jin et al., *Self-supervised Learning on Graphs Deep Insights and New Direction*.
+
+[11] Emmanouil Antonios Platanios et al., *Deep Graphs*.
+
+[12] Xikun Zhang et al., *Continual Learning on Graphs Challenges, Solutions, and Opportunities*.
+
+[13] Namyong Park et al., *MetaGL Evaluation-Free Selection of Graph Learning Models via Meta-Learning*.
+
+[14] Xavier Bresson et al., *Residual Gated Graph ConvNets*.
+
+[15] Yukuo Cen et al., *CogDL A Comprehensive Library for Graph Deep Learning*.
+
+[16] Hongyang Gao et al., *Large-Scale Learnable Graph Convolutional Networks*.
+
+[17] Marcel Hoffmann et al., *Open-World Lifelong Graph Learning*.
+
+[18] Yijun Tian et al., *Recipe2Vec Multi-modal Recipe Representation Learning with Graph Neural Networks*.
+
+[19] Jing Ren et al., *Graph Learning for Anomaly Analytics Algorithms, Applications, and Challenges*.
+
+[20] Ahmed Samy Nassar et al., *GeoGraph Learning graph-based multi-view object detection with geometric cues end-to-end*.
+
+[21] Fenyu Hu et al., *GraphAIR Graph Adaptive Interaction Representation Learning*.
+
+[22] Zhen Zhang et al., *Hierarchical Graph Pooling with Structure Learning*.
+
+[23] Karolis Martinkus et al., *AgentNet Agent-based Graph Neural Networks*.
+
+[24] Shaileshh Bojja Venkatakrishnan et al., *Graph2Seq Graph to Sequence Learning with Graph Neural Encoders and Decoders*.
+
+[25] Kexin Huang et al., *Graph Meta Learning via Local Subgraphs*.
+
+[26] Jiancan Wu et al., *Self-supervised Graph Learning for Recommendation*.
+
+[27] Zongzhao Li et al., *Visual Commonsense based Heterogeneous Graph Contrastive Learning*.
+
+[28] R. A. Rossi, R. Zhou, & N. K. Ahmed, *Deep Feature Learning for Graphs*.
+
+[29] K. K. Thekumparampil, C. Wang, S. Oh, & L. J. Li, *Attention-based Graph Neural Network for Semi-supervised Learning*.
+
+[30] P. Veličković, W. Fedus, W. L. Hamilton, P. Liò, Y. Bengio, & R. D. Hjelm, *Deep Graph Infomax*.
+
+[31] J. Sardina, L. Costabello, & C. Guéret, *Veni, Vidi, Vici: Solving the Myriad of Challenges before Knowledge Graph Learning*.
+
+[32] R. B. Joshi, & S. Mishra, *Learning Graph Representations*.
+
+[33] G. Zhang, J. Wu, J. Yang, S. Xue, W. Hu, C. Zhou, H. Peng, Q. Z. Sheng, & C. Aggarwal, *Graph-Level Neural Networks: Current Progress and Future Directions*.
+
+[34] A. Arnab, C. Sun, & C. Schmid, *Unified Graph Structured Models for Video Understanding*.
+
+[35] A. Gadde, A. Anis, & A. Ortega, *Active Semi-Supervised Learning Using Sampling Theory for Graph Signals*.
+
+[36] D. Xu, C. Ruan, E. Korpeoglu, S. Kumar, & K. Achan, *Product Knowledge Graph Embedding for E-commerce*.

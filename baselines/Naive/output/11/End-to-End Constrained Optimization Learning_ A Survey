@@ -1,0 +1,101 @@
+### Abstract
+This survey paper provides a comprehensive overview of end-to-end constrained optimization learning, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It identifies overarching themes, discusses the evolution of ideas and technologies, and explores significant debates and future prospects within the field.
+
+### Introduction
+End-to-end constrained optimization learning integrates machine learning techniques with traditional optimization methods to enhance decision-making processes under constraints. This integration is particularly beneficial in scenarios requiring rapid, informed decisions, such as in real-time operations or large-scale distributed systems. The surveyed papers underscore the importance of developing flexible, adaptive, and efficient algorithms capable of handling the intricacies of constrained environments. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and future directions in end-to-end constrained optimization learning.
+
+### Key Themes and Trends
+
+#### Active Constraint Identification
+Active constraint identification is a critical aspect of constrained optimization learning. Several papers emphasize the importance of identifying and handling active constraints efficiently. Sidhant Misra et al. (2021) propose a streaming algorithm that learns relevant active constraint sets from training samples, enabling the construction of interpretable models. This approach is particularly useful in dynamic environments where constraints evolve over time. Andrea Simonetto et al. (2021) further discuss the application of time-varying optimization techniques, highlighting the dynamic nature of constraints in real-world scenarios.
+
+#### Learned Optimizers
+The concept of learned optimizers represents another significant trend. Luke Metz et al. (2021) introduce VeLO, a versatile learned optimizer trained on a wide array of optimization tasks, demonstrating its capability to adapt to specific problem contexts without hyperparameter tuning. This approach contrasts with traditional optimizers, which often require manual adjustment and can be inefficient. VeLO's performance underscores the potential of deep learning techniques in enhancing optimization strategies.
+
+#### Adaptive Algorithm Configuration
+Adaptive algorithm configuration is explored in several papers, focusing on improving the efficiency and effectiveness of optimization processes. Gellért Weisz et al. (2021) present LeapsAndBounds, an algorithm designed to approximate optimal configurations with minimal runtime, showcasing its superiority over previous methods. Robert Kleinberg et al. (2021) introduce Structured Procrastination with Confidence, an adaptive algorithm configuration method that retains the anytime property of earlier approaches while offering improved performance in practical settings.
+
+### Methodological Approaches
+
+The methodologies employed in these studies range from streaming algorithms and learned optimizers to adaptive configuration frameworks. Each approach aims to address specific challenges within constrained optimization:
+
+- **Streaming Algorithms**: These algorithms are designed to identify active constraints in real-time, processing large volumes of data efficiently. They are particularly useful in dynamic environments where constraints evolve over time.
+  
+- **Learned Optimizers**: Leveraging deep learning, these optimizers are trained on extensive datasets to mimic human decision-making processes, offering flexibility and adaptability. They eliminate the need for manual hyperparameter tuning, a significant advantage in complex optimization tasks.
+  
+- **Adaptive Configuration**: These methods dynamically adjust algorithm parameters based on runtime performance, ensuring optimal configurations are achieved even under varying conditions. This adaptability is crucial for maintaining performance in fluctuating environments.
+
+### Advanced Techniques and Innovations
+
+Several papers introduce innovative concepts that push the boundaries of constrained optimization:
+
+- **End-to-End Frameworks**: Papers like those by Charles Herrmann et al. (2021) and Chengming Zhang et al. (2021) explore end-to-end frameworks that integrate model training and pruning, aiming to reduce computational costs while preserving accuracy. These frameworks offer a holistic approach to optimization, addressing both training and inference phases.
+
+- **Multi-Armed Bandits for Optimization**: Chin-Jung Hsu et al. (2021) introduce MICKY, a collective optimizer that employs multi-armed bandit techniques to efficiently explore and exploit cloud configurations. This approach significantly reduces measurement costs, making it a viable solution for optimizing multiple workloads simultaneously.
+
+- **AutoScale and OSCA**: Kim and Wu (2023) propose AutoScale, an adaptive execution scaling engine for deep learning inference at the edge, utilizing reinforcement learning to select the most energy-efficient inference execution target. Zhang et al. (2023) introduce OSCA, a framework for scaling large language model (LLM) inference with limited compute, achieving better accuracy with significantly reduced compute resources.
+
+### Comparative Analysis
+
+Comparisons between different methodologies reveal several interesting trends:
+
+- **Algorithmic Efficiency vs. Accuracy**: While adaptive optimization algorithms generally offer enhanced accuracy, they come with increased computational complexity. Conversely, static algorithms may sacrifice some accuracy for greater efficiency.
+  
+- **Scalability and Flexibility**: Dynamic resource allocation systems demonstrate superior scalability and flexibility compared to traditional static approaches, making them ideal for large-scale deployments.
+  
+- **Practical Implementation**: Practical considerations often drive the adoption of certain methods over others. For instance, the implementation of Band-limited Soft Actor Critic Model highlights the importance of balancing theoretical performance with practical applicability.
+
+### Implications and Future Directions
+
+The collective insights from these papers suggest several avenues for future research and practical application:
+
+- **Enhanced Personalization**: Further exploration into personalized optimization could unlock new opportunities for tailoring solutions to specific user needs.
+  
+- **Cross-Domain Applications**: The methodologies developed for one domain could be adapted and applied to others, potentially leading to breakthroughs in areas such as healthcare, finance, and environmental science.
+  
+- **Integration of Emerging Technologies**: The incorporation of emerging technologies, such as quantum computing and advanced AI techniques, could revolutionize the landscape of constrained optimization learning.
+
+### Conclusion
+This survey synthesizes key contributions, methodologies, results, and implications from 100 influential papers in the field of end-to-end constrained optimization learning. The identified themes, methodologies, and innovations underscore the evolving nature of optimization techniques and their applicability in addressing real-world challenges. As research continues to advance, the integration of machine learning with traditional optimization methods promises to deliver more efficient, adaptable, and scalable solutions across various domains.
+
+### References
+[1] Tao Chen and Miqing Li. "Multi-Objectivizing Software Configuration Tuning."
+[2] Daniel Rotem et al. "Finding the SWEET Spot: Analysis and Improvement of Adaptive Inference in Low Resource Settings."
+[3] Dmitriy Katz et al. "Flexible Resource Allocation for Clouds and All-Optical Networks."
+[4] Pengzhou Chen et al. "MMO: Meta Multi-Objectivization for Software Configuration Tuning."
+[5] Christos Mavridis and John Baras. "Annealing Optimization for Progressive Learning with Stochastic Approximation."
+[6] Roel Brouwer et al. "A Hybrid Optimization Framework for the General Continuous Energy-Constrained Scheduling Problem."
+[7] Moe Kayali and Chi Wang. "Mining Robust Default Configurations for Resource-constrained AutoML."
+[8] Gabriele Berton et al. "Deep Visual Geo-localization Benchmark."
+[9] Danit Shifman Abukasis et al. "Adaptive Learning for the Resource-Constrained Classification Problem."
+[10] Jessica B. Hamrick et al. "Metacontrol for Adaptive Imagination-Based Optimization."
+[11] Maria-Florina Balcan et al. "Learning to Optimize Computational Resources: Frugal Training with Generalization Guarantees."
+[12] Maxim Borisyak et al. "Adaptive Divergence for Rapid Adversarial Optimization."
+[13] Aljoša Vodopija et al. "Characterization of Constrained Continuous Multiobjective Optimization Problems."
+[14] Steven Gardner et al. "Constrained Multi-Objective Optimization for Automated Machine Learning."
+[15] Fabio Cermelli et al. "CoMFormer: Continual Learning in Semantic and Panoptic Segmentation."
+[16] Gus Kristiansen et al. "Narrowing the Focus: Learned Optimizers for Pretrained Models."
+[17] Shaojie Tang. "Robust Adaptive Submodular Maximization."
+[18] Cyrille W. Combettes et al. "Projection-Free Adaptive Gradients for Large-Scale Optimization."
+[19] Risheng Liu et al. "Optimization-Derived Learning with Essential Convergence Analysis of Training and Hyper-training."
+[20] Eneko Osaba et al. "Optimizing IaC Configurations: a Case Study Using Nature-inspired Computing."
+[21] Sabidur Rahman et al. "Auto-Scaling Network Resources using Machine Learning to Improve QoS and Reduce Cost."
+[22] Hanzely. "Adaptive Optimization Algorithms for Machine Learning."
+[23] Liaw et al. "HyperSched: Dynamic Resource Reallocation for Model Development on a Deadline."
+[24] Masters et al. "Making EfficientNet More Efficient."
+[25] Borisyuk et al. "LiRank: Industrial Large Scale Ranking Models at LinkedIn."
+[26] Nagrecha & Kumar. "Saturn: Efficient Multi-Large-Model Deep Learning."
+[27] Yan et al. "A Surrogate Objective Framework for Prediction+Optimization with Soft Constraints."
+[28] Gunther & Chawla. "Linux-Tomcat Application Performance on Amazon AWS."
+[29] Campo et al. "Band-limited Soft Actor Critic Model."
+[30] Gallego & Berbeglia. "The Limits of Personalization in Assortment Optimization."
+[31] Kim and Wu. "AutoScale: An Adaptive Execution Scaling Engine for Deep Learning Inference at the Edge."
+[32] Lu et al. "Hyper-parameter Tuning under a Budget Constraint."
+[33] Zhang et al. "Optimized Sample Compute Allocation (OSCA)."
+[34] Arani et al. "RGPNet: A Real-time General-purpose Semantic Segmentation Architecture."
+[35] Mendes et al. "TrimTuner: An Efficient System for Optimizing Machine Learning Jobs in the Cloud via Sub-sampling."
+[36] Al-Matouq and Vincent. "Multiple Window Moving Horizon Estimation (MW-MHE)."
+[37] Corti et al. "Resource-Efficient Deep Subnetworks (REDS)."
+[38] Ye et al. "GLOP: A Hierarchical Framework for Solving Large-scale Routing Problems in Real-time."
+
+This structure and content provide a comprehensive overview of the current state of research in end-to-end constrained optimization learning, integrating insights from multiple summaries into a cohesive narrative.

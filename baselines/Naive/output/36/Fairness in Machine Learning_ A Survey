@@ -1,0 +1,65 @@
+### Abstract:
+This survey paper provides a comprehensive overview of fairness in machine learning, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It underscores the complexity of ensuring fairness in ML models, the multifaceted nature of the problem, and the evolving strategies to mitigate bias. Through a critical analysis of the literature, this survey aims to guide researchers, practitioners, and policymakers in advancing the field towards more equitable and just AI systems.
+
+### Introduction:
+The rapid evolution of machine learning (ML) has led to its widespread adoption in critical decision-making processes across various sectors, including criminal justice, healthcare, and finance. However, the increasing reliance on ML models has raised significant concerns about fairness and bias. ML systems can perpetuate or even exacerbate existing societal inequalities, leading to unfair outcomes for marginalized communities. Ensuring fairness in ML is thus a critical concern that requires a multifaceted approach, integrating technical, legal, and ethical perspectives.
+
+This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape of fairness in machine learning. We examine the methodologies, results, and implications of 100 influential papers, highlighting common themes, trends, and debates. The paper is organized into several sections, each focusing on a specific aspect of fairness in ML, such as intersectional fairness, bias mitigation techniques, and the role of causal and counterfactual reasoning. We also discuss the evolution of ideas and technologies over time and identify significant challenges and future directions.
+
+### Main Sections:
+
+#### Intersectional Fairness
+Intersectional fairness is a critical dimension of ensuring equity in ML models. This concept recognizes that individuals may face compounded disadvantages due to the intersection of multiple sensitive attributes, such as race and gender (Gohar & Cheng, A Survey on Intersectional Fairness in Machine Learning). Several papers emphasize the importance of considering intersectional biases to prevent unfair outcomes (Kearns et al., "Preventing Fairness Gerrymandering"). These studies highlight the need for more nuanced and context-specific fairness measures that account for the complexities of real-world interactions.
+
+#### Bias Mitigation Techniques
+Bias mitigation in ML involves various techniques aimed at reducing unfairness at different stages of the ML pipeline—pre-processing, in-processing, and post-processing (Hort et al., Bias Mitigation for Machine Learning Classifiers). Pre-processing techniques include reweighing and disparate impact analysis, while in-processing methods involve modifying the loss function or introducing fairness constraints. Post-processing techniques focus on adjusting the output of the model to meet fairness criteria. Recent advancements have seen the development of ensemble frameworks and adversarial networks to enhance fairness (Xiaoqian Wang & Heng Huang, 2020; Matt J. Kusner et al., 2017). These methods aim to balance predictive accuracy with fairness, addressing the inherent trade-offs (Russell, Machine Learning Fairness in Justice Systems).
+
+#### Causal and Counterfactual Reasoning
+The use of causal and counterfactual reasoning has gained traction in the field of fairness in ML (Oneto & Chiappa, Fairness in Machine Learning). Causal reasoning allows for a deeper understanding of the underlying mechanisms that lead to unfair outcomes, while counterfactual fairness ensures that decisions remain unchanged regardless of demographic changes (Kusner et al., "Causal Interventions for Fairness"). These approaches offer a more nuanced way to define and mitigate fairness, moving beyond traditional statistical measures to consider the causal relationships between variables (Mickel, Racial Ethnic Categories in AI and Algorithmic Fairness).
+
+#### Legal and Ethical Considerations
+Addressing fairness in ML also requires alignment with legal standards and ethical principles (Ho & Xiang, Affirmative Algorithms). Several papers emphasize the need for fairness metrics that are legally compliant and ethically sound (Lum et al., 2020; Trewin, 2020). The legal and ethical implications of deploying biased ML models can be severe, affecting not only individual rights but also societal norms and values. Researchers must therefore consider the broader social and ethical impacts of their work (Bennett & Keyes, What is the Point of Fairness?).
+
+#### Challenges and Future Directions
+Despite significant progress, several challenges persist in the field of fairness in ML. One major challenge is the lack of a universally accepted definition of fairness, leading to conflicting metrics and methodologies (Binns, Fairness in Machine Learning). Another challenge is the difficulty in balancing fairness with predictive accuracy, which often comes at the cost of reduced model performance (Neal, 2020). Future research should focus on refining fairness definitions, developing more robust and scalable techniques, and fostering interdisciplinary collaboration to address these challenges (Schumann et al., 2020).
+
+### Conclusion:
+The reviewed papers collectively highlight the complexity and multidimensionality of fairness in machine learning. They underscore the need for a holistic approach that integrates technical, legal, and ethical perspectives. The field has seen significant advancements in methodologies and tools to mitigate bias, but ongoing challenges require continued research and innovation. Future efforts should focus on refining fairness definitions, adapting methods to diverse contexts, and addressing measurement biases. The ongoing dialogue between academia, industry, and policymakers remains crucial for advancing the field of fairness in machine learning.
+
+### References:
+[1] A Survey on Intersectional Fairness in Machine Learning  
+[2] Bias Mitigation for Machine Learning Classifiers  
+[3] Fairness in Machine Learning  
+[4] Affirmative Algorithms  
+[5] Preventing Fairness Gerrymandering  
+[6] Learning for Counterfactual Fairness from Observational Data  
+[7] Fairness Warnings and Fair-MAML  
+[8] Demographic-Reliant Algorithmic Fairness  
+[9] Fairness-aware Model-agnostic Positive and Unlabeled Learning  
+[10] PC-Fairness  
+[11] When Mitigating Bias is Unfair  
+[12] Algorithmic Fairness and Social Welfare  
+[13] Systematic Evaluation of Predictive Fairness  
+[14] Two-stage Algorithm for Fairness-aware Machine Learning  
+[15] Provably Fair Representations  
+[16] FairEnough: Standardizing Evaluation and Model Selection for Fairness Research in NLP  
+[17] Marginal Debiased Network for Fair Visual Recognition  
+[18] Provable Fairness for Neural Network Models using Formal Verification  
+[19] Bias and Fairness in Computer Vision Applications of the Criminal Justice System  
+[20] Fairpriori: Improving Biased Subgroup Discovery for Deep Neural Network Fairness  
+[21] Bounding and Approximating Intersectional Fairness through Marginal Fairness  
+[22] Equality of Effort  
+[23] Multiaccurate Proxies for Downstream Fairness  
+[24] ICON$^2$: Reliably Benchmarking Predictive Inequity in Object Detection  
+[25] The Unbearable Weight of Massive Privilege  
+[26] Avoiding Discrimination through Causal Reasoning  
+[27] Bias in Machine Learning Software  
+[28] Bias, Fairness, and Accountability with AI and ML Algorithms  
+[29] Beyond Accuracy  
+[30] Towards Fairness in Visual Recognition  
+[31] Causal Interventions for Fairness  
+[32] Racial Ethnic Categories in AI and Algorithmic Fairness  
+[33] The Frontiers of Fairness in Machine Learning  
+[34] The Possibility of Fairness  
+[35] AI Fairness from Principles to Practice  
+[36] Assessing the Fairness of AI Systems

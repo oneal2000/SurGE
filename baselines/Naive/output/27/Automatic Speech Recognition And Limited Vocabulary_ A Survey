@@ -1,0 +1,73 @@
+### Abstract
+This survey paper provides a comprehensive overview of Automatic Speech Recognition (ASR) in limited vocabulary environments, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It emphasizes the importance of specialized datasets, alternative approaches, and the integration of advanced techniques such as pre-trained language models and self-training. The analysis reveals significant progress in handling limited vocabularies, contextual information, and multilingual/multimodal integration, while also identifying persistent challenges related to robustness and error mitigation.
+
+### Introduction
+The field of Automatic Speech Recognition (ASR) has witnessed remarkable advancements, driven by the proliferation of deep learning techniques and the availability of large-scale datasets. Traditional ASR systems, which often relied on hybrid models combining neural networks and Hidden Markov Models (HMMs), have evolved into purely neural network-based approaches. These advancements have enabled the development of end-to-end models capable of handling complex linguistic phenomena, including named entities, out-of-vocabulary (OOV) words, and conversational context. However, the majority of research and development efforts still focus on well-resourced languages, often neglecting under-resourced languages and limited vocabulary environments. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape of ASR in limited vocabulary settings. The paper also identifies significant debates, challenges, and future directions, emphasizing the importance of specialized methodologies and the integration of contextual and linguistic information.
+
+### Main Sections
+
+#### Methodological Approaches
+
+**Specialized Datasets and Pre-Training**
+Several studies highlight the importance of specialized datasets for ASR in limited vocabulary environments. For instance, *Pete Warden* introduces a dataset for keyword spotting systems, emphasizing the need for specialized datasets that differ from conventional ASR datasets ([Warden, Speech Commands]). Similarly, *Guan-Ting Lin et al.* present Discrete Spoken Unit Adaptive Learning (DUAL), which leverages unlabeled data for pre-training and fine-tuning by the downstream task ([Lin et al., DUAL]). This method bypasses the need for ASR transcripts, making it highly desirable for low-resource languages.
+
+**Alternative Approaches and End-to-End Models**
+Studies also explore alternative approaches to traditional ASR methods. *William Chan et al.* introduce SpeechStew, which trains a single large neural network on a mix of various public datasets, achieving state-of-the-art results without external language models ([Chan et al., SpeechStew]). This approach underscores the potential of leveraging large-scale weak supervision and unsupervised learning techniques.
+
+**Contextual Information and Multi-Modal Integration**
+The integration of contextual information and multi-modal data is another key theme. *Diehl Martinez et al.* introduce an attention mechanism for adapting language models with contextual data, achieving substantial reductions in perplexity ([Martinez et al., Attention-based Contextual Language Model Adaptation for Speech Recognition]). Additionally, *Li et al.* propose a method that considers fine-grained visual objects in video frames to enhance the accuracy of audio-visual question answering (AVQA) tasks ([Li et al., Object-aware Adaptive-Positivity Learning for Audio-Visual Question Answering]).
+
+#### Comparative Analysis and Innovations
+
+**Performance Metrics and Benchmarking**
+Comparative analyses reveal significant differences in ASR methodologies. *Nozaki et al.* present an end-to-end model for generating punctuated text from speech, surpassing traditional cascaded systems ([Nozaki et al., End-to-end Speech-to-Punctuated-Text Recognition]). *Kwon and Chung* propose a mixture of language experts to improve multi-lingual ASR, facilitating low-resource language integration ([Kwon and Chung, MoLE: Mixture of Language Experts for Multi-Lingual Automatic Speech Recognition]). *Yin et al.* highlight the effectiveness of attention-based sequence-to-sequence models, achieving state-of-the-art performance on LibriSpeech ([Yin et al., Attention-based sequence-to-sequence model for speech recognition]).
+
+**Challenges and Limitations**
+Despite these advancements, several challenges remain. For example, *Li et al.* find that speech recognition errors can have a catastrophic effect on machine comprehension, underscoring the need for robust error mitigation strategies ([Li et al., Spoken SQuAD: A Study of Mitigating the Impact of Speech Recognition Errors on Listening Comprehension]). Similarly, *Kukk and Alumäe* note that the performance of ASR systems on accented speech varies significantly, with accuracy dropping dramatically for heavily accented speech ([Kukk and Alumäe, Improving Language Identification of Accented Speech]).
+
+#### Implications and Future Directions
+
+**Reduced Dependence on Labeled Datasets**
+Key findings suggest that future research should focus on reducing the dependence on large labeled datasets. Techniques such as large-scale weak supervision and unsupervised learning hold great promise for enhancing ASR capabilities in niche domains.
+
+**Integration of Multi-Task Learning and Context-Specific Adaptations**
+The integration of multi-task learning and context-specific adaptations is another promising avenue for future research. *Gupta et al.* demonstrate the effectiveness of leveraging visual context to adapt acoustic and language models, achieving notable reductions in word error rates (WER) ([Gupta et al., Visual Features for Context-Aware Speech Recognition]).
+
+**Continuous Refinement in Neural Architectures and Training Strategies**
+Continued refinement in neural architectures and training strategies is essential for advancing the state-of-the-art in ASR. *Xiong et al.* enhance the Contextual Listen, Attend and Spell (CLAS) model by incorporating deeper contextual information, resulting in significant improvements in named entity recognition (NER) tasks ([Xiong et al., Deep CLAS: Deep Contextual Listen, Attend and Spell]).
+
+### Conclusion
+This survey provides a comprehensive overview of ASR methodologies and their applications in limited vocabulary settings, highlighting emerging trends and future prospects. The integration of specialized datasets, alternative approaches, and advanced techniques such as pre-trained language models and self-training represents significant advancements in the field. However, challenges related to robustness and error mitigation continue to drive ongoing research efforts. These advancements not only improve the accuracy and reliability of ASR systems but also pave the way for innovative applications in diverse domains, including education, healthcare, and digital assistants.
+
+### References
+
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] Enhancing Large Language Model-based Speech Recognition by Contextualization for Rare and Ambiguous Words  
+[5] Visual Features for Context-Aware Speech Recognition  
+[6] Object-aware Adaptive-Positivity Learning for Audio-Visual Question Answering  
+[7] Deep Contextual Listen, Attend and Spell  
+[8] Intuitive Multilingual Audio-Visual Speech Recognition with a Single-Trained Model  
+[9] Can We Read Speech Beyond the Lips: Rethinking RoI Selection for Deep Visual Speech Recognition  
+[10] Error-preserving Automatic Speech Recognition of Young English Learners' Language  
+[11] Multi-task Recurrent Model for Speech and Speaker Recognition  
+[12] Listen, Attend and Spell  
+[13] Multi-task Recurrent Model for Speech and Speaker Recognition  
+[14] Attention-based Contextual Language Model Adaptation for Speech Recognition  
+[15] Improving Automatic Speech Recognition for Non-Native English with Transfer Learning and Language Model Decoding  
+[16] Advances in All-Neural Speech Recognition  
+[17] Attention-based sequence-to-sequence model for speech recognition: development of state-of-the-art system on LibriSpeech and its application to non-native English  
+[18] Improving Selective Visual Question Answering by Learning from Your Peers  
+[19] End-to-end Speech-to-Punctuated-Text Recognition  
+[20] Mixture of Language Experts for Multi-Lingual Automatic Speech Recognition  
+[21] Speech Recognition by Simply Fine-tuning BERT  
+[22] Effects of Language Modeling on Speech-driven Question Answering Systems  
+[23] Self-Training for End-to-End Speech Recognition  
+[24] Speech Commands Dataset for Keyword Spotting Systems  
+[25] Discrete Spoken Unit Adaptive Learning (DUAL) for ASR  
+[26] SpeechStew: Training a Single Large Neural Network on Various Public Datasets for ASR  
+[27] Improving Selective Visual Question Answering by Learning from Your Peers  
+[28] Improving Language Identification of Accented Speech  
+[29] Spoken SQuAD: A Study of Mitigating the Impact of Speech Recognition Errors on Listening Comprehension  
+[30] RUSLAN: Russian Spoken Language Corpus for Speech Synthesis

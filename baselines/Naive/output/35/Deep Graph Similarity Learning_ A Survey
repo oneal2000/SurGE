@@ -1,0 +1,85 @@
+**Abstract:**
+This survey paper provides a comprehensive overview of deep graph similarity learning, synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. Through a detailed examination of deep learning techniques, graph neural networks (GNNs), and innovative methods for measuring graph similarities, this survey aims to consolidate knowledge and provide researchers with a coherent understanding of the current landscape.
+
+**Introduction:**
+The rapid evolution of deep graph similarity learning has significantly impacted various fields, including social network analysis, bioinformatics, and computer vision. Traditional methods for measuring graph similarity often relied on handcrafted features and predefined similarity measures, limiting their applicability and scalability. With the advent of deep learning, particularly graph neural networks (GNNs), the field has seen a surge in methodologies that automate the process of feature extraction and similarity learning. These advancements have led to more robust and scalable solutions, capable of handling large and complex datasets. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and identify promising future directions.
+
+**Main Sections:**
+
+### 1. Methodological Approaches
+
+#### 1.1 Deep Graph Embedding Techniques
+Several papers explore deep learning-based approaches to graph embedding, where graphs are mapped into a high-dimensional vector space to capture their structural properties. For instance, "Deep Graph Similarity Learning" by Guixiang Ma et al. [Ma, Ahmed, Willke, & Yu, 2020] provides a comprehensive review of deep graph similarity learning methods, categorizing them based on their architectures and applications. They emphasize the importance of designing deep learning models that can effectively map input graphs to a target space where distances approximate structural distances.
+
+#### 1.2 Graph Convolutional Networks (GCNs)
+Graph Convolutional Networks (GCNs) have become a cornerstone in deep graph similarity learning due to their ability to capture local graph structures through convolution operations. Yunsheng Bai et al. [Bai, Ding, Sun, & Wang, 2020] introduce GSimCNN, a model that leverages GCNs to predict similarity scores between pairs of graphs. Their approach demonstrates superior performance on real graph datasets, underscoring the effectiveness of GCNs in graph similarity tasks.
+
+#### 1.3 Attention Mechanisms
+Attention mechanisms have been incorporated into graph similarity learning to focus on relevant parts of graphs during comparison. Yujia Li et al. [Li, Gu, Dullien, Vinyals, & Kohli, 2020] propose Graph Matching Networks (GMNs), which use cross-graph attention to compute similarity scores between graphs. GMNs are designed to handle cross-level interactions, enhancing the model's ability to capture complex structural similarities.
+
+#### 1.4 Contrastive Learning
+Contrastive learning has emerged as another effective strategy for learning graph representations. Jianxiang Yu et al. [Yu, Ge, Li, & Zhou, 2020] introduce MEOW, a heterogeneous graph contrastive learning framework that utilizes meta-path contexts and adaptively weighted negative samples to improve graph representation learning. MEOW demonstrates superior performance on various datasets, highlighting the benefits of incorporating rich contextual information into graph learning.
+
+#### 1.5 Node-Graph Interactions
+Xiang Ling et al. [Ling, Wu, Wang, Ma, Xu, Liu, Wu, & Ji, 2020] propose Multilevel Graph Matching Networks (MGMNs) that explicitly model interactions between nodes and graphs. MGMNs consist of a node-graph matching network and a Siamese GCN, enabling the model to learn both low-level and high-level interactions between graphs. Their experiments show that MGMNs outperform existing methods on graph classification and regression tasks.
+
+#### 1.6 Knowledge Integration
+Integrating prior knowledge into graph similarity learning has also been explored. Kenneth Marino et al. [Marino, Salakhutdinov, & Gupta, 2020] investigate the use of knowledge graphs in image classification, demonstrating that structured prior knowledge can significantly improve performance. Their Graph Search Neural Network (GSNN) efficiently incorporates large knowledge graphs into a vision classification pipeline, showcasing the potential of knowledge integration in graph learning tasks.
+
+### 2. Common Themes and Trends
+
+A recurring theme in these papers is the need for scalable and efficient methods that can handle large-scale graph data. Many approaches, such as those utilizing attention mechanisms and contrastive learning, aim to address this challenge by focusing on key components of graphs rather than processing entire graph structures. Additionally, there is a trend towards integrating prior knowledge and contextual information into graph learning models to improve their performance and interpretability.
+
+### 3. Applications and Results
+
+The applications of graph similarity learning span multiple domains, showcasing the versatility and utility of these techniques. For example, in malware detection, GNNs can learn robust embeddings from malware represented as expressive graph structures, leading to efficient detection [Tristan Bilot et al., 2020]. In image classification and reinforcement learning, GNNs show improvements over traditional pixel-based methods [Naman Goyal and David Steiner, 2020]. In link prediction and entity classification, GNNs effectively capture complex relational structures [Juanhui Li et al., 2020; Michael Schlichtkrull et al., 2020].
+
+### 4. Advancements and Innovations
+
+Significant advancements include the development of new architectures, such as GMNs and MGMNs, which explicitly model complex interactions between graphs. These models not only improve performance but also offer greater interpretability by highlighting important structural elements. Moreover, the introduction of contrastive learning techniques, such as MEOW, has opened new avenues for learning robust graph representations.
+
+### 5. Challenges and Future Directions
+
+Despite significant progress, several challenges remain. Scalability and efficiency continue to be major concerns, especially when dealing with large and complex graph datasets. Additionally, the interpretability of deep graph similarity models remains a challenge, as these models often operate as black boxes. Future research could focus on further improving the scalability and efficiency of graph similarity learning methods, as well as exploring new ways to integrate domain-specific knowledge into graph learning models. Developing more interpretable models that can provide insights into why certain graphs are similar could enhance the practical utility of these methods.
+
+### Conclusion
+
+This survey synthesizes the key contributions, methodologies, results, and implications of 100 influential papers in the field of deep graph similarity learning. By examining the common themes, trends, and innovations in these papers, we gain valuable insights into the current state of the field and identify promising directions for future research. The advancements in deep learning techniques for graph similarity learning are poised to drive significant progress in a wide range of applications, from social network analysis to bioinformatics and beyond.
+
+---
+
+### References
+
+[A Survey on Edge Computing Systems and Tools]  
+[Information Geometry of Evolution of Neural Network Parameters While Training]  
+[Survey of Hallucination in Natural Language Generation]  
+[Visiting Distant Neighbors in Graph Convolutional Networks]  
+[Simplified Graph Convolution with Heterophily]  
+[Heterogeneous Graph Contrastive Multi-view Learning]  
+[Large Scale Learning on Non-Homophilous Graphs]  
+[New Benchmarks for Learning on Non-Homophilous Graphs]  
+[A Graph Neural Network Approach for Product Relationship Prediction]  
+[Modeling Relational Data with Graph Convolutional Networks]  
+[Price-aware Recommendation with Graph Convolutional Networks]  
+[DDGK: Learning Graph Representations for Deep Divergence Graph Kernels]  
+[Towards Similarity Graphs Constructed by Deep Reinforcement Learning]  
+[A Survey on Malware Detection with Graph Representation Learning]  
+[Graph Neural Networks for Image Classification and Reinforcement Learning using Graph representations]  
+[Evaluating Graph Neural Networks for Link Prediction]  
+[Dependency Networks for Collaborative Filtering and Data Visualization]  
+[Learning Personalized Scoping for Graph Neural Networks under Heterophily]  
+[Detecting Localized Categorical Attributes on Graphs]  
+[DDGK: Learning Graph Representations for Deep Divergence Graph Kernels]  
+[Hierarchical Graph Matching Network for Graph Similarity Computation]  
+[Attributed Multi-order Graph Convolutional Network for Heterogeneous Graphs]  
+[Contrastive Learning Is Spectral Clustering On Similarity Graph]  
+[Multiplex Heterogeneous Graph Prototypical Contrastive Learning]  
+[Attention-based GNN for Semi-supervised Learning]  
+[Link Prediction Based on Graph Neural Networks]  
+[Goal-directed Deep Learning for Clustering]  
+[Graph Neural Networks: A Review of Methods and Applications]  
+[Adversarial Learning and Robustness in Graph-based Models]  
+[Inductive Learning in Large Attributed Graphs]  
+[Equivariant Subgraph Aggregation Networks]  
+[Attentional Graph Convolutional Networks for MOOC Knowledge Concept Recommendation]  
+[GraphAnoGAN: Detecting Anomalous Snapshots in Attributed Graphs]

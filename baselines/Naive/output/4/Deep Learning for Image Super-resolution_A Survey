@@ -1,0 +1,93 @@
+### Abstract
+This survey paper provides a comprehensive overview of deep learning methodologies in image super-resolution (ISR), synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. By critically analyzing and synthesizing the information, this survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and potential future trajectories in ISR.
+
+### Introduction
+Image super-resolution (ISR) aims to enhance the resolution of low-resolution (LR) images to high-resolution (HR) ones, a task critical for various applications including medical imaging, surveillance, and digital photography. Traditional methods often rely on handcrafted algorithms, interpolation techniques, and complex mathematical models, which are limited in their ability to handle non-linear mappings and preserve fine details. However, the advent of deep learning, particularly deep convolutional neural networks (CNNs), has revolutionized ISR by enabling end-to-end learning for LR to HR mappings. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape and potential future trajectories in ISR.
+
+### Main Sections
+
+#### 1. Methodologies and Approaches
+
+##### 1.1 Deep Convolutional Networks (DCNs)
+Deep convolutional networks (DCNs) have become the cornerstone of modern ISR techniques. Initial pioneering work by Dong et al. (2015) introduced lightweight DCNs for ISR, demonstrating the potential of deep learning in this domain. Kim et al. (2016) further established that deeper networks yield better accuracy, setting the stage for subsequent advancements. Techniques such as residual learning, as refined by Lim et al. (2017), have been crucial in optimizing performance and stabilizing training. 
+
+##### 1.2 Residual Dense Networks
+Zhang et al. (2018) introduced Residual Dense Networks (RDN) for ISR, which utilize Residual Dense Blocks (RDB) to connect convolutional layers densely, improving feature extraction and stabilization during training. These networks have been shown to enhance the representational power of deep models without compromising computational efficiency.
+
+##### 1.3 Multi-Scale and Hierarchical Approaches
+Multi-scale and hierarchical approaches have been instrumental in addressing the challenges posed by diverse HR regions and upscaling factors. Jia et al. (2017) and Li et al. (2019) introduced MSSR and MDCN networks, respectively, leveraging multi-scale synthesis for enhanced performance. These approaches allow for more flexible solutions that can adapt to varying upscaling requirements.
+
+##### 1.4 Attention Mechanisms
+Attention mechanisms have emerged as a powerful tool in ISR, allowing for better global and local information aggregation. Wang et al. (2019) combined multi-scale mechanisms with attention to improve feature extraction and information aggregation, leading to higher reconstruction quality. Additionally, Zhao et al. (2019) introduced a lightweight convolutional neural network for ISR using pixel attention (PA), generating 3D attention maps to focus on relevant features.
+
+##### 1.5 Generative Adversarial Networks (GANs)
+GANs have been increasingly employed to generate more perceptually pleasing images. For instance, "A Fully Progressive Approach to Single-Image Super-Resolution" [Wang, Y.] utilizes a GAN named ProGanSR, which follows a progressive multi-scale design principle to achieve high-quality results for large upsampling factors. Similarly, "Image Superresolution using Scale-Recurrent Dense Network" [Purohit, K.] employs a GAN-based framework to mitigate issues with conventional loss functions.
+
+##### 1.6 Binarized Neural Networks
+Efficient computation has been a key focus in recent ISR research. Ma et al. (2019) demonstrated that binarizing convolutional filters can reduce model size and computation time without sacrificing accuracy. Wei et al. (2021) introduced EBSR, which utilizes spatial re-scaling and channel-wise shifting and re-scaling to retain more spatial and channel-wise information in binary convolutions, thereby improving model efficiency and performance.
+
+#### 2. Comparative Analysis
+
+Key trends observed across the surveyed papers include:
+- **Network Depth:** Deeper networks generally improve performance but require careful management of training stability and efficiency.
+- **Multi-Scale Architectures:** These architectures offer flexible solutions for diverse HR regions and upscaling factors.
+- **Attention Mechanisms:** Enhance feature extraction and information aggregation, improving reconstruction quality.
+- **Efficiency and Performance Balance:** Methods like EBSR and Bicubic++ achieve high PSNR with minimal resources, while others like OverNet and Cascading Residual Network reduce computational complexity.
+
+#### 3. Implications and Future Directions
+
+##### 3.1 Model Efficiency
+There is a growing emphasis on developing more efficient models that can be deployed on resource-constrained devices. Innovations like EBSR and OverNet indicate promising directions for balancing performance and computational efficiency.
+
+##### 3.2 Integration of Advanced Techniques
+Combining advanced techniques such as GANs, attention mechanisms, and iterative optimization could lead to even more effective ISR solutions. Future research may explore hybrid approaches that integrate traditional methods with deep learning to enhance robustness and versatility.
+
+##### 3.3 Real-World Applications
+ISR techniques need to be robust to real-world conditions, including diverse degradation patterns and challenging datasets. Developing models that perform well under these conditions is essential for broader adoption in practical applications.
+
+### Conclusion
+This survey provides a comprehensive overview of recent advancements in deep learning for image super-resolution, highlighting key contributions from twenty influential papers in each of the five summaries. The methodologies discussed range from enhancing model efficiency and performance to innovative architectural designs and loss function adaptations. Collectively, these works underscore the evolving landscape of ISR and point towards exciting future research directions aimed at achieving more accurate, efficient, and contextually aware ISR solutions.
+
+### References
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] A deep journey into super-resolution: A survey  
+[5] Is image super-resolution helpful for other vision tasks?  
+[6] Image super-resolution using deep convolutional networks  
+[7] Single image super-resolution using multi-scale convolutional neural network  
+[8] MDCN: Multi-scale dense cross network for image super-resolution  
+[9] Efficient super resolution using binarized neural network  
+[10] Deep high-resolution representation learning for visual recognition  
+[11] Multi-scale attention network for single image super-resolution  
+[12] Deep learning for image super-resolution: A survey  
+[13] Residual Dense Network for Image Super-Resolution  
+[14] Deep Back-Projection Networks for Single Image Super-resolution  
+[15] Efficient Single Image Super Resolution using Enhanced Learned Group Convolutions  
+[16] Orthogonally Regularized Deep Networks For Image Super-resolution  
+[17] Magnifying Networks for Images with Gigapixel Resolution  
+[18] Deep Recursive Networks for Image Super-Resolution  
+[19] Adaptive Inference Networks for Image Super-Resolution  
+[20] Residual Channel Attention Networks for Image Super-Resolution  
+[21] Fully 1x1 Convolutional Networks for Image Super-Resolution  
+[22] Enhanced Binary Neural Network for Image Super-Resolution  
+[23] Deep Iterative Residual Convolutional Network for Single Image Super-Resolution  
+[24] Multi-grained Attention Networks for Single Image Super-Resolution  
+[25] Wide Activation for Efficient and Accurate Image Super-Resolution  
+[26] A Two-Stage Attentive Network for Single Image Super-Resolution  
+[27] EnhanceNet: Single Image Super-Resolution Through Automated Texture Synthesis  
+[28] Image Denoising and Super-Resolution using Residual Learning of Deep Convolutional Network  
+[29] Improved Residual Networks for Image and Video Recognition  
+[30] Image Superresolution using Scale-Recurrent Dense Network  
+[31] A Fully Progressive Approach to Single-Image Super-Resolution  
+[32] Learning A Single Network for Scale-Arbitrary Super-Resolution  
+[33] Meta-SR A Magnification-Arbitrary Network for Super-Resolution  
+[34] Deep Laplacian Pyramid Networks for Fast and Accurate Super-Resolution  
+[35] OverNet Lightweight Multi-Scale Super-Resolution with Overscaling Network  
+[36] Cascading Residual Network  
+[37] SRFormer Permuted Self-Attention for Single Image Super-Resolution  
+[38] Image Super-Resolution via Attention based Back Projection Networks  
+[39] Multigrid Backprojection Super-Resolution and Deep Filter Visualization  
+[40] Image Super-resolution with An Enhanced Group Convolutional Neural Network  
+[41] Learning a Single Convolutional Super-Resolution Network for Multiple Degradations  
+[42] Bicubic++ Slim, Slimmer, Slimmest -- Designing an Industry-Grade Super-Resolution Network

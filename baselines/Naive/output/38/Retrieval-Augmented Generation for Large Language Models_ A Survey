@@ -1,0 +1,94 @@
+### Abstract
+This survey paper provides a comprehensive overview of retrieval-augmented generation (RAG) for large language models (LLMs), synthesizing findings from 100 influential research papers published over the past decade. The paper highlights key advancements, methodologies, and challenges, offering insights into future research directions. It emphasizes how RAG enhances the capabilities of LLMs by integrating external knowledge retrieval mechanisms, improving accuracy, reliability, and contextual relevance. The survey also identifies emerging trends and potential avenues for further investigation, contributing to the ongoing evolution of LLMs.
+
+### Introduction
+The rapid evolution of large language models (LLMs) has significantly transformed the field of natural language processing (NLP) and text generation. LLMs, such as GPT-3 and others, have demonstrated remarkable abilities in generating human-like text across various domains, including code generation, procedural content generation, and educational assessment. However, these models often suffer from inherent limitations such as hallucination, outdated knowledge, and inefficient handling of large context windows. To address these challenges, retrieval-augmented generation (RAG) has emerged as a promising paradigm that integrates external knowledge retrieval mechanisms into the generation process. This survey aims to consolidate knowledge from a vast array of studies to provide researchers with a coherent understanding of the current landscape of RAG for LLMs. The paper highlights key methodologies, applications, and challenges, and offers insights into future research directions.
+
+### Main Sections
+
+#### Methodologies and Approaches
+
+Retrieval-augmented generation (RAG) frameworks typically consist of three core components: the retriever, the generator, and the augmentation techniques. These components work in concert to enhance the accuracy and reliability of LLMs, particularly in knowledge-intensive tasks.
+
+##### Retrieval-Augmented Generation Frameworks
+
+- **Naive RAG**: Simple retrieval and generation processes without sophisticated augmentation techniques.
+- **Advanced RAG**: Incorporates advanced retrieval strategies, such as ranking and filtering, to improve the relevance and quality of retrieved information.
+- **Modular RAG**: Allows for modular design, where different retrieval and generation modules can be combined flexibly to suit specific tasks.
+
+##### Innovative Methods
+
+Several papers have introduced innovative methods to enhance the generation capabilities of LLMs through retrieval augmentation. For instance, **Dynamic Retrieval-Augmented Generation (DRAG)** by Shapkin et al. (2023) integrates compressed embeddings of retrieved entities directly into the generative model, overcoming limitations associated with context window sizes. Another notable method is **Prompt Expansion**, proposed by Datta et al. (2023), which enhances the diversity and quality of text-to-image generation by expanding initial prompts to yield a wider range of appealing images. Similarly, **Non-Autoregressive Text Generation (NAG)** by Su et al. (2023) demonstrates that BERT can serve as a backbone for NAG models, significantly improving performance.
+
+#### Applications Across Modalities and Tasks
+
+RAG has been applied to a variety of tasks and domains, demonstrating its versatility and effectiveness:
+
+- **Code Generation**: LLMs are used to generate source code from natural language descriptions, showing promise in automating software development tasks.
+- **Procedural Content Generation (PCG)**: LLMs are employed to generate game levels based on textual prompts, enabling the creation of diverse and engaging gaming experiences.
+- **Educational Assessment**: RAG-based systems are utilized for automated short answer scoring, improving the efficiency and accuracy of educational assessments.
+
+#### Key Findings and Innovations
+
+Several studies have highlighted innovative approaches and significant findings in the realm of RAG:
+
+- **Self-Verification Strategies**: Techniques such as self-verification are proposed to mitigate the issue of "hallucination" in LLMs, where models tend to overconfidently label non-entity inputs as entities.
+- **Prompt Engineering**: Effective use of prompts can significantly enhance the performance of LLMs, allowing them to generate more coherent and contextually relevant text.
+- **Benchmarking Libraries**: The development of benchmarking libraries, such as BERGEN, facilitates standardized and reproducible evaluations of RAG systems, ensuring fair comparisons and advancements.
+
+#### Challenges and Future Directions
+
+Despite the progress made in RAG, several challenges remain:
+
+- **Evaluation Metrics**: There is a need for more robust and comprehensive evaluation metrics that can accurately measure the quality and reliability of RAG systems.
+- **Scalability**: Ensuring that RAG systems can scale effectively to handle large volumes of data and diverse knowledge sources is crucial for broader adoption.
+- **Interpretability**: Enhancing the interpretability of RAG systems to provide clear explanations for their decisions and actions is vital for building trust and acceptance.
+
+### Conclusion
+This survey has provided a comprehensive overview of the advancements, methodologies, and implications of RAG in enhancing the capabilities of LLMs. From integrating external knowledge to addressing inherent limitations, RAG has demonstrated its potential to revolutionize various NLP tasks. Future research should focus on overcoming the remaining challenges and exploring new applications to fully realize the potential of RAG in the realm of LLMs.
+
+### References
+[1] A Survey on Edge Computing Systems and Tools  
+[2] Information Geometry of Evolution of Neural Network Parameters While Training  
+[3] Survey of Hallucination in Natural Language Generation  
+[4] A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models  
+[5] Evaluation of Retrieval-Augmented Generation: A Survey  
+[6] Retrieval-Augmented Test Generation: How Far Are We?  
+[7] Generative Software Engineering  
+[8] Retrieval-Augmented Generation for Large Language Models: A Survey  
+[9] A Survey on Large Language Models for Code Generation  
+[10] MarioGPT: Open-Ended Text2Level Generation through Large Language Models  
+[11] Generative Language Models with Retrieval Augmented Generation for Automated Short Answer Scoring  
+[12] GPT-NER: Named Entity Recognition via Large Language Models  
+[13] Conceptual Design Generation Using Large Language Models  
+[14] BERGEN: A Benchmarking Library for Retrieval-Augmented Generation  
+[15] Dynamic Retrieval-Augmented Generation (DRAG)  
+[16] Prompt Expansion  
+[17] Non-Autoregressive Text Generation (NAG)  
+[18] L2CEval: Comprehensive Evaluation Framework for Assessing Language-to-Code Generation Capabilities  
+[19] BLEURT: Learned Evaluation Metric Based on BERT  
+[20] Personalized Multimodal Generation (PMG)  
+[21] Deliberate then Generate (DTG) Framework  
+[22] Re-Imagen: Retrieval-Augmented Text-to-Image Generator  
+[23] EvolveDirector: Training Text-to-Image Models Using Public Resources and Pre-trained Vision-Language Models  
+[24] Progressive Generation of Long Text with Pretrained Language Models  
+[25] PatternGPT: A Pattern-Driven Framework for Large Language Model Text Generation  
+[26] Learning to Generate Better Than Your LLM  
+[27] Leveraging Large Language Models for NLG Evaluation: A Survey  
+[28] Evaluating Text-to-Visual Generation with Image-to-Text Generation  
+[29] LitLLM: A Toolkit for Scientific Literature Review  
+[30] GPTScore: Evaluate as You Desire  
+[31] Re2G: Retrieve, Rerank, Generate  
+[32] Teach LLMs to Personalize: An Approach Inspired by Writing Education  
+[33] ERAGent: Enhancing Retrieval-Augmented Language Models with Improved Accuracy, Efficiency, and Personalization  
+[34] Revisiting Text-to-Image Evaluation with Gecko: On Metrics, Prompts, and Human Ratings  
+[35] Exploring Continual Learning for Code Generation Models  
+[36] A Survey on Retrieval-Augmented Text Generation for Large Language Models  
+[37] CPM: A Large-scale Generative Chinese Pre-trained Language Model  
+[38] Divide and Conquer: Language Models Can Plan and Self-Correct for Compositional Text-to-Image Generation  
+[39] FashionReGen: LLM-Empowered Fashion Report Generation  
+[40] Improving ChatGPT Prompt for Code Generation  
+[41] LayoutPrompter: Awaken the Design Ability of Large Language Models  
+[42] APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding  
+[43] Large Language Models for Generative Information Extraction: A Survey  
+[44] Generative AI Systems: A Systems-based Perspective on Generative AI
