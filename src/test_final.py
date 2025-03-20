@@ -1,29 +1,7 @@
 import argparse
 import os
-import gdown
 from evaluator import SurGEvaluator
 
-def ensure_data_files():
-    data_dir = "data"
-    os.makedirs(data_dir, exist_ok=True)
-    
-    #下载 corpus.json
-    corpus_path = os.path.join(data_dir, "corpus.json")
-    if not os.path.exists(corpus_path):
-        gdown.download(
-            "https://drive.google.com/uc?id=1QAZV9nL7xhtkdiiqPpM0I8do6cF7mY3j",
-            corpus_path,
-            quiet=False
-        )
-    
-    # 下载 surveys.json
-    surveys_path = os.path.join(data_dir, "surveys.json")
-    if not os.path.exists(surveys_path):
-        gdown.download(
-            "https://drive.google.com/uc?id=1-hK_RrOwvvMQ5Zk9Pnsn6c67pGokGWqp",
-            surveys_path,
-            quiet=False
-        )
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Survey Generation Evaluator')
@@ -59,7 +37,6 @@ def parse_args():
     parser.add_argument(
         '--api_key',
         type=str,
-        default="sk-omIoPRsaYiBOkedF21B8D4Dd515d4782A69f50F679C38fF2",
         help='API key for evaluation services'
     )
     parser.add_argument(
@@ -71,7 +48,6 @@ def parse_args():
     return parser.parse_args()
 
 if __name__ == '__main__':
-    ensure_data_files()
     args = parse_args()
 
     evaluator = SurGEvaluator(
