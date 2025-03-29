@@ -6,7 +6,6 @@ import markdownParser,rougeBleuFuncs,structureFuncs,informationFuncs
 import os
 from sentence_transformers import CrossEncoder
 # from transformers import AutoModelForCausalLM, AutoTokenizer
-from bertopic import BERTopic
 from tqdm import tqdm
 from FlagEmbedding import FlagModel
 from openai import OpenAI
@@ -72,15 +71,6 @@ class SurGEvaluator:
         #     self.judge_model_tokenizer = AutoTokenizer.from_pretrained(self.judge_model_path)
         # else:
         #     self.judge_model_tokenizer = None    
-        if bertopic_model_path == None :
-            self.bertopic_model_path = 'MaartenGr/BERTopic_ArXiv'
-        else:
-            self.bertopic_model_path = bertopic_model_path
-            
-        if bertopic_embedding_model_path == None :
-            self.bertopic_embedding_model_path = 'sentence-transformers/all-mpnet-base-v2'
-        else:
-            self.bertopic_embedding_model_path = bertopic_embedding_model_path
             
         if nli_model_path == None:
             self.nli_model_path = 'cross-encoder/nli-deberta-v3-base'
@@ -88,9 +78,6 @@ class SurGEvaluator:
             self.nli_model_path = nli_model_path
             
         self.nli_model = None
-        self.bertopic_model = None
-        self.bertopic_embedding_model = None
-        
             
     def single_eval(self,survey_id,passage_path,eval_list):
         psg_node = markdownParser.parse_markdown(passage_path)
@@ -109,7 +96,6 @@ class SurGEvaluator:
             "Information_Collection": {
                 "Comprehensiveness": {
                     "Coverage": None,
-                    "Diversity": None
                 },
                 "Relevance": {
                     "Paper_Level": None,
@@ -141,7 +127,7 @@ class SurGEvaluator:
         
         if "SH-Recall" in eval_list or "ALL" in eval_list:
             if self.flag_model == None:
-                self.flag_model = FlagModel('/liuzyai04/thuir/xaz/Models/bge-large-en-v1.5', 
+                self.flag_model = FlagModel(self.flag_model_path, 
                     query_instruction_for_retrieval="Generate a representation for this title to calculate the similarity between titles:",
                         use_fp16=True)  
             
@@ -166,32 +152,6 @@ class SurGEvaluator:
             coverage = informationFuncs.eval_coverage(self.survey_map[survey_id]['all_cites'],refid2docid)
             eval_result["Information_Collection"]["Comprehensiveness"]["Coverage"] = coverage
             
-        if "Diversity" in eval_list or "ALL" in eval_list:
-            div = self.survey_map[survey_id]['Bertopic_CD']
-            diversity = None
-            if div == None:
-                diversity = 1
-            else:
-                gen_cites = []
-                for k,v in refid2docid.items():
-                    gen_cites.append(v)
-                if len(gen_cites) < 2:
-                    diversity = 0
-                else:
-                    cites_text = []
-                    for c in gen_cites:
-                        if isinstance(c,int):
-                            cites_text.append(self.corpus_map[c]['Title'] + ":" + self.corpus_map[c]['Abstract'])
-                        else:
-                            cites_text.append(c)
-
-                    if self.bertopic_model == None:
-                        self.bertopic_model = BERTopic.load(self.bertopic_model_path,embedding_model=self.bertopic_embedding_model_path)
-                        self.bertopic_model.calculate_probabilities = True
-                    diversity = informationFuncs.eval_diversity(cites_text,div,self.bertopic_model)
-                    
-            eval_result["Information_Collection"]["Comprehensiveness"]["Diversity"] = diversity
-        
         if "Relevance-Paper" in eval_list or "ALL" in eval_list:
             if self.nli_model == None:
                 self.nli_model = CrossEncoder(self.nli_model_path)
@@ -347,7 +307,11 @@ class SurGEvaluator:
         if save_path != None :
             with open (save_path,"w",encoding='utf-8') as f:
                 f.write('')
-        survey_ids = os.listdir(passage_dir)
+                
+        survey_ids = [
+            d for d in os.listdir(passage_dir)
+            if os.path.isdir(os.path.join(passage_dir, d))
+        ]
 
         length = len(survey_ids)
         
@@ -355,7 +319,6 @@ class SurGEvaluator:
             "Information_Collection": {
                 "Comprehensiveness": {
                     "Coverage": None,
-                    "Diversity": None
                 },
                 "Relevance": {
                     "Paper_Level": None,
@@ -436,5 +399,3 @@ class SurGEvaluator:
             print(eval_result)
             
         return eval_result
-    
-

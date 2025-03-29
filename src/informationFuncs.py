@@ -19,17 +19,6 @@ def eval_coverage(target_cites:list, gen_cite_map:dict):
             
     return hit/all
 
-def compute_cd(embeddings, metric="euclidean"):
-    embeddings = np.array(embeddings)  
-    distances = pdist(embeddings, metric=metric)  
-    return np.mean(distances)
-
-def eval_diversity(gen_cite_text:list, gt_bertopic, model):
-    topic, prob = model.transform(gen_cite_text)
-    cd = compute_cd(prob)
-    return cd/gt_bertopic
-
-
 def eval_relevance_paper(target_survey,gen_cite_map:dict,cite_content:dict,nli_model):
     if len(gen_cite_map) == 0:
         return 0
