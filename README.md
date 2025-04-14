@@ -251,5 +251,5 @@ As for `eval_list`, we have the choices below:
 
 ## License
 
-This project is licensed under [MIT License](https://github.com/oneal2000/JuDGE/blob/main/LICENSE). Please review the LICENSE file for more details.
+This project is licensed under [MIT License](https://github.com/oneal2000/SurGE/blob/main/LICENSE). Please review the LICENSE file for more details.
 
