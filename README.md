@@ -246,3 +246,10 @@ As for `eval_list`, we have the choices below:
 `Relevance-Sentence` : Evaluate Relevance-Sentence
 
 `Logic` : Evaluate Logic
+
+
+
+## License
+
+This project is licensed under [MIT License](https://github.com/oneal2000/JuDGE/blob/main/LICENSE). Please review the LICENSE file for more details.
+
