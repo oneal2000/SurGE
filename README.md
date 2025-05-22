@@ -1,6 +1,8 @@
 # SurGE
 
-Welcome to the official GitHub repository for SurGE. SurGE is a benchmark and dataset for end-to-end scientific survey generation in the computer science domain. Developed for the SIGIR Resource Track, SurGE provides a comprehensive resource for evaluating automated survey generation systems through both a large-scale dataset and a fully automated evaluation framework.
+Welcome to the official GitHub repository for SurGE. SurGE is a benchmark and dataset for end-to-end scientific survey generation in the computer science domain. 
+
+SurGE provides a comprehensive resource for evaluating automated survey generation systems through both a large-scale dataset and a fully automated evaluation framework.
 
 ## Overview
 
