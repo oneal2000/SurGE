@@ -28,14 +28,7 @@ class SurGEvaluator:
         if using_openai == True:
             assert api_key != None
             #self.client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-            self.client = OpenAI(
-                base_url="https://svip.xty.app/v1", 
-                api_key=api_key,  
-                http_client=httpx.Client(
-                    base_url="https://svip.xty.app/v1",
-                    follow_redirects=True,
-                ),
-        )
+            self.client = OpenAI(api_key=api_key)
         else:
             self.client = None
         
