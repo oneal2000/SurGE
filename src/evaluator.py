@@ -125,7 +125,7 @@ class SurGEvaluator:
                         use_fp16=True)  
             
             sh_recall = structureFuncs.eval_SHRecall(self.survey_map[survey_id],psg_node,self.flag_model)
-            eval_result["Survey_Structure"]["SH-Recall"] = sh_recall
+            eval_result["Survey_Structure"]["SH-Recall"] = float(sh_recall)
         
         if "Structure_Quality" in eval_list or "ALL" in eval_list:
             # if self.judge_model == None and self.using_openai == False:
