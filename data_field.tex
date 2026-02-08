@@ -1,0 +1,61 @@
+
+\section{Data Field Descriptions}
+\label{sec:field_details}
+
+In this section, we provide the detailed metadata schema for both the ground-truth survey dataset and the academic retrieval corpus utilized in SurGE.
+Table~\ref{tab:survey_fields} details the pre-processed fields for each survey instance. These fields include not only standard metadata (e.g., Title, Authors) but also the parsed structural tree and the ground-truth list of cited documents, which are essential for evaluating hierarchical generation and citation recall.
+
+Additionally, Table~\ref{tab:lit_fields} provides an overview of the metadata schema used in our academic retrieval corpus. Each entry is structured to support efficient retrieval and interpretability.
+
+\section{The Use of Large Language Models} Large language models were used as a tool to help refine the language and improve the clarity of this manuscript. Following any such use, the authors reviewed and edited the content to ensure its accuracy and originality, and take full responsibility for the final text.
+
+
+
+\begin{table}[t]
+    \centering
+    \small
+    \caption{Description of metadata fields in the pre-processed survey dataset.}
+    \label{tab:survey_fields}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{@{}l p{6cm}@{}} 
+    \toprule
+    \textbf{Field} & \textbf{Description} \\
+    \midrule
+    SurveyID & A unique identifier for the survey. \\
+    Authors & List of contributing researchers. \\
+    Title & The title of the survey paper. \\
+    Year & The publication year of the survey. \\
+    Date & The timestamp of publication. \\
+    Category & Subject classification following the arXiv taxonomy. \\
+    Abstract & The abstract of the survey paper. \\
+    Structure & Hierarchical representation of the survey. \\
+    All\_Cites & List of document IDs cited in the survey. \\
+    \bottomrule
+    \end{tabular}}
+\end{table}
+
+
+\begin{table}[t]
+    \centering
+    \caption{Fields and Descriptions for the Literature Knowledge Base.}
+    \label{tab:lit_fields}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{lc}
+    \toprule
+    \textbf{Key}    & \textbf{Description} \\
+    \midrule
+    \textbf{Title}    & The title of the research paper. \\
+    \textbf{Authors}  & A list of contributing researchers. \\
+    \textbf{Year}     & The publication year of the paper. \\
+    \textbf{Date}     & The exact timestamp of the paper's release. \\
+    \textbf{Abstract} & The abstract of the paper. \\
+    \textbf{Category} & The subject classification following the arXiv taxonomy. \\
+    \textbf{doc\_id}  & A unique identifier assigned for reference and retrieval. \\
+    \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+
+
+
