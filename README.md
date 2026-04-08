@@ -1,3 +1,7 @@
+📢 News: this work has been accepted at the SIGIR 2026!
+
+
+
 # SurGE
 
 Welcome to the official GitHub repository for SurGE. SurGE is a benchmark and dataset for end-to-end scientific survey generation in the computer science domain. 
